@@ -13,7 +13,10 @@ Il progetto Wox Edge si colloca nel programma MilanoHub di Banca d’Italia ovve
 Obiettivi raggiunti:
 
 • Completato: Configurare l’assistente in lingua Italiana;
+
 • Completato: Rendere il sistema "stand-alone";
+
 • Completato ma non ottimizzato: Ottimizzarlo per qualsiasi fascia d’età;
+
 • Progettato ma non implementato: Renderlo raggiungibile tramite API;
 
