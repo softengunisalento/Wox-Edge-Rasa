@@ -38,7 +38,7 @@ la Knowledge Base da configurare su Rasa era la seguente:
 
 Di seguito la struttura del file json con alcuni esempi:
 
-{
+{ 
   "rasa_nlu_data": {
     "common_examples": [
       {
