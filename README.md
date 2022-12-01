@@ -40,7 +40,7 @@ Di seguito la struttura del file json con alcuni esempi:
 
 { 
   "rasa_nlu_data": {
-    "common_examples": [
+    "common_examples": 
       {
         "text": "Vorrei acquistare una box per la ricarica della macchina elettrica",
         "intent": "PR - (Prestito Green) Finalità Ricarica veicoli - IND (finalita-prestito-green)"
@@ -48,7 +48,7 @@ Di seguito la struttura del file json con alcuni esempi:
 {
         "text": "Ricarica di 100 euro",
         "intent": "- (LOG) - Accredito Denaro",
-        "entities": [
+        "entities": 
           {
             "start": 0,
             "end": 8,
@@ -67,7 +67,7 @@ Di seguito la struttura del file json con alcuni esempi:
             "value": "euro",
             "entity": "currency-name"
           }
-        ] 
+         
       },
       
       
