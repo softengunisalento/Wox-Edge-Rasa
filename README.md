@@ -6,7 +6,7 @@
 
 > Implementazione di un intent matching layer stand-alone a supporto dell'interazione vocale con ATM evoluti in dispositivi constrained 
 
-##Cos'è? 
+## Cos'è? 
 
 Il progetto Wox Edge si colloca nel programma MilanoHub di Banca d’Italia ovvero il centro di innovazione realizzato dalla Banca d’Italia per sostenere l’evoluzione digitale del mercato finanziario. L'obiettivo prepostosi è la creazione di un ATM evoluto di ultima generazione che possa effettivamente aiutare chiunque abbia bisogno di supporto o voglia effetture operazioni sul proprio conto senza dover interagire manualmente con esso.
 
@@ -23,7 +23,7 @@ Obiettivi raggiunti:
 
 Per fare ciò ci si è serviti di Rasa
 
-##Knowledge Base
+## Knowledge Base
 
 la Knowledge Base da configurare su Rasa era la seguente:
 
@@ -33,7 +33,7 @@ la Knowledge Base da configurare su Rasa era la seguente:
 
 • Intent di FallBack totali: 32
 
-##Struttura file nlu.json
+## Struttura file nlu.json
 
 
 Di seguito la struttura del file json con alcuni esempi:
@@ -71,7 +71,7 @@ Di seguito la struttura del file json con alcuni esempi:
       },
       
       
-##Struttura file domain.yml
+## Struttura file domain.yml
 
 intents:
   - '- (CONTEXT) - Anticipo Trattamento di Fine Servizio - DIR'
