@@ -39,23 +39,25 @@ la Knowledge Base da configurare su Rasa era la seguente:
 
 Di seguito la struttura del file json con alcuni esempi:
 
-{<br/>
-    "rasa_nlu_data": {<br/>
-        "common_examples": [<br/>
-            {<br/>
-                "text": "Vorrei acquistare una box per la ricarica della macchina elettrica",<br/>
-                "intent": "PR - (Prestito Green) Finalità Ricarica veicoli - IND (finalita-prestito-green)"<br/>
-            },<br/>
-            {<br/>
+```json
+    {
+    "rasa_nlu_data": {
+        "common_examples": [
+            {
+                "text": "Vorrei acquistare una box per la ricarica della macchina elettrica",
+                "intent": "PR - (Prestito Green) Finalità Ricarica veicoli - IND (finalita-prestito-green)"
+            },
+            {
                 "text": "Colonnina di ricarica per mezzi a batteria",<br/>
-                "intent": "PR - (Prestito Green) Finalità Ricarica veicoli - IND (finalita-prestito-green)"<br/>
-            },<br/>
+                "intent": "PR - (Prestito Green) Finalità Ricarica veicoli - IND (finalita-prestito-green)"
+            },
+ ```
       
 
       
       
 ## Struttura file domain.yml
-
+```
 intents:
   - '- (CONTEXT) - Anticipo Trattamento di Fine Servizio - DIR'
   - '- (CONTEXT) - Casa e Famiglia - DIR'
@@ -87,8 +89,7 @@ responses:
   - text :Riguardo l'assicurazione Casa e Famiglia posso fornirti una descrizione generica oppure posso rispondere a domande specifiche riguardanti costi ed eventi coperti. Scegli tu che cosa chiedermi!
   - ...
 
-
-
+```
 
 
 
