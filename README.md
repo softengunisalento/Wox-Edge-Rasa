@@ -42,13 +42,13 @@ Di seguito la struttura del file json con alcuni esempi:
     "rasa_nlu_data": {<br/>
         "common_examples": [<br/>
             {<br/>
-                "text": "Vorrei acquistare una box per la ricarica della macchina elettrica",
-                "intent": "PR - (Prestito Green) Finalità Ricarica veicoli - IND (finalita-prestito-green)"
-            },
-            {
-                "text": "Colonnina di ricarica per mezzi a batteria",
-                "intent": "PR - (Prestito Green) Finalità Ricarica veicoli - IND (finalita-prestito-green)"
-            },
+                "text": "Vorrei acquistare una box per la ricarica della macchina elettrica",<br/>
+                "intent": "PR - (Prestito Green) Finalità Ricarica veicoli - IND (finalita-prestito-green)"<br/>
+            },<br/>
+            {<br/>
+                "text": "Colonnina di ricarica per mezzi a batteria",<br/>
+                "intent": "PR - (Prestito Green) Finalità Ricarica veicoli - IND (finalita-prestito-green)"<br/>
+            },<br/>
       
 
       
