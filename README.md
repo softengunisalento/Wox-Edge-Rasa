@@ -39,18 +39,18 @@ la Knowledge Base da configurare su Rasa era la seguente:
 Di seguito la struttura del file json con alcuni esempi:
 
 {<br/>
-  "rasa_nlu_data": {<br/>
-    "common_examples": [<br/>
-      {<br/>
-        "text": "Vorrei acquistare una box per la ricarica della macchina elettrica",
-        "intent": "PR - (Prestito Green) Finalità Ricarica veicoli - IND (finalita-prestito-green)"
-      },
-      {
-        "text": "Colonnina di ricarica per mezzi a batteria",
-        "intent": "PR - (Prestito Green) Finalità Ricarica veicoli - IND (finalita-prestito-green)"
-      },
+    "rasa_nlu_data": {<br/>
+        "common_examples": [<br/>
+            {<br/>
+                "text": "Vorrei acquistare una box per la ricarica della macchina elettrica",
+                "intent": "PR - (Prestito Green) Finalità Ricarica veicoli - IND (finalita-prestito-green)"
+            },
+            {
+                "text": "Colonnina di ricarica per mezzi a batteria",
+                "intent": "PR - (Prestito Green) Finalità Ricarica veicoli - IND (finalita-prestito-green)"
+            },
       
-}
+
       
       
 ## Struttura file domain.yml
