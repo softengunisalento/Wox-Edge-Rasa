@@ -1,0 +1,1234 @@
+version: "3.1"
+
+intents:
+ - _-_-_(CONTEXT)_-_Anticipo_Trattamento_di_Fine_Servizio_-_DIR
+  - -_-_(CONTEXT)_-_Casa_e_Famiglia_-_DIR
+  - -_-_(CONTEXT)_-_Cessione_del_Quinto_Pensione_-_DIR
+  - -_-_(CONTEXT)_-_Cessione_del_Quinto_Stipendio_-_DIR
+  - -_-_(CONTEXT)_-_Leasing_Autoveicoli_-_DIR
+  - -_-_(CONTEXT)_-_Leasing_Nautico_-_DIR
+  - -_-_(CONTEXT)_-_Leasing_Sicurezza_-_DIR
+  - -_-_(CONTEXT)_-_Mastercard_Debit_-_DIR
+  - -_-_(CONTEXT)_-_Mastercard_Platinum_-_DIR
+  - -_-_(CONTEXT)_-_Mastercard_Platinum_-_DIR,
+  - -_-_(CONTEXT)_-_Mastercard_Prepaid_-_DIR
+  - -_-_(CONTEXT)_-_Mutuo_-_DIR
+  - -_-_(CONTEXT)_-_Noleggio_Lungo_Termine_-_DIR
+  - -_-_(CONTEXT)_-_Persona_in_Chiaro_-_DIR
+  - -_-_(CONTEXT)_-_Prestito_Green_-_DIR
+  - -_-_(CONTEXT)_-_Prestito_Prontotuo_-_DIR
+  - -_-_(CONTEXT)_-_Prestito_dOnore_-_DIR
+  - -_-_(CONTEXT)_-_Protezione_Vita_-_DIR
+  - -_-_(CONTEXT)_-_Sella_Premium_-_DIR
+  - -_-_(CONTEXT)_-_Sella_Start_-_DIR
+  - -_-_(CONTEXT)_-_Valore_Auto_-_DIR
+  - -_-_(CONTEXT)_-_Visa_Classic_-_DIR
+  - -_-_(DEF)_-_Chiusura
+  - -_-_(DEF)_-_Cosa_posso_fare?
+  - -_-_(DEF)_-_Grazie
+  - -_-_(DEF)_-_Servizi+Prodotti
+  - -_-_(DEF)_-_Welcome_
+  - -_-_(LOG)_-_Accredito_Denaro_>_no_+_modifica,
+  - -_-_(LOG)_-_Accredito_Denaro_>_sì
+  - -_-_(LOG)_-_Accredito_Denaro,
+  - -_-_(LOG)_-_Elenco_Conti
+  - -_-_(LOG)_-_Lista_Ultimi_Movimenti_LIM
+  - -_-_(LOG)_-_Prelevare_Denaro_>_no
+  - -_-_(LOG)_-_Prelevare_Denaro_>_no_+_modifica,
+  - -_-_(LOG)_-_Prelevare_Denaro_>_sì
+  - -_-_(LOG)_-_Prelevare_Denaro,
+  - -_-_(LOG)_-_Saldo_Disponibile_su_Conto
+  - -_-_(LOG)_-_Saldo_Disponibile_su_Conto,
+  - -_-_(LOG)_-_Specificare_Nome_Conto_per_Prelievo,
+  - -_-_(LOG)_-_Specificare_Nome_Conto_per_Ricarica,
+  - -_-_(LOG)_-_Specificare_Nome_Conto_per_Saldo_Disponibile,
+  - -_-_(LOG)_-_Spiegazioni_Specificare_Nome_Conto_per_Prelievo
+  - -_-_(LOG)_-_Spiegazioni_Specificare_Nome_Conto_per_Ricarica
+  - -_AS_-_(Casa_e_Famiglia)_Assistenza_-_DIR
+  - -_AS_-_(Casa_e_Famiglia)_Assistenza_-_IND_(casa-e-famiglia)
+  - -_AS_-_(Casa_e_Famiglia)_Comfort_-_IND_(casa-e-famiglia)
+  - -_AS_-_(Casa_e_Famiglia)_Costi_-_DIR
+  - -_AS_-_(Casa_e_Famiglia)_Costi_-_IND_(casa-e-famiglia)
+  - -_AS_-_(Casa_e_Famiglia)_Deluxe_-_IND_(casa-e-famiglia)
+  - -_AS_-_(Casa_e_Famiglia)_Eventi_coperti_-_DIR
+  - -_AS_-_(Casa_e_Famiglia)_Eventi_coperti_-_IND_(casa-e-famiglia)
+  - -_AS_-_(Casa_e_Famiglia)_Informazioni_Casa_e_Famiglia_-_DIR
+  - -_AS_-_(Casa_e_Famiglia)_Informazioni_Casa_e_Famiglia_-_DIR_>_Voglio_saperne_di_più
+  - -_AS_-_(Casa_e_Famiglia)_Informazioni_Casa_e_Famiglia_-_IND_(assicurazioni-casa)
+  - -_AS_-_(Casa_e_Famiglia)_Informazioni_Casa_e_Famiglia_-_IND_(assicurazioni-casa)>_Voglio_sapere_di_più
+  - -_AS_-_(Casa_e_Famiglia)_Informazioni_Casa_e_Famiglia_-_IND_(casa-e-famiglia)
+  - -_AS_-_(Casa_e_Famiglia)_Small_-_IND_(casa-e-famiglia)
+  - -_AS_-_(Persona_in_Chiaro)_Cambio_Lavoro_-_DIR
+  - -_AS_-_(Persona_in_Chiaro)_Cambio_Lavoro_-_IND_(persona-in-chiaro)
+  - -_AS_-_(Persona_in_Chiaro)_Garanzie_Aggiuntive_-_DIR
+  - -_AS_-_(Persona_in_Chiaro)_Garanzie_Aggiuntive_-_IND_(persona-in-chiaro)
+  - -_AS_-_(Persona_in_Chiaro)_Informazioni_Persona_In_Chiaro_-_DIR
+  - -_AS_-_(Persona_in_Chiaro)_Informazioni_Persona_In_Chiaro_-_DIR_>_Voglio_saperne_di_più
+  - -_AS_-_(Persona_in_Chiaro)_Informazioni_Persona_In_Chiaro_-_IND_(assicurazioni-persona)
+  - -_AS_-_(Persona_in_Chiaro)_Informazioni_Persona_In_Chiaro_-_IND_(assicurazioni-persona)>_Maggiori_info
+  - -_AS_-_(Persona_in_Chiaro)_Informazioni_Persona_In_Chiaro_-_IND_(persona-in-chiaro)
+  - -_AS_-_(Protezione_Vita)_Beneficiari_-_DIR
+  - -_AS_-_(Protezione_Vita)_Beneficiari_-_IND_(protezione-vita)
+  - -_AS_-_(Protezione_Vita)_Chiusura_-_DIR
+  - -_AS_-_(Protezione_Vita)_Chiusura_-_IND_(protezione-vita)
+  - -_AS_-_(Protezione_Vita)_Costi_-_DIR
+  - -_AS_-_(Protezione_Vita)_Costi_-_IND_(protezione-vita)
+  - -_AS_-_(Protezione_Vita)_Durata_-_DIR
+  - -_AS_-_(Protezione_Vita)_Durata_-_IND_(protezione-vita)
+  - -_AS_-_(Protezione_Vita)_Età_massima_-_DIR
+  - -_AS_-_(Protezione_Vita)_Età_massima_-_IND_(protezione-vita)
+  - -_AS_-_(Protezione_Vita)_Fumo_-_DIR
+  - -_AS_-_(Protezione_Vita)_Fumo_-_IND_(protezione-vita)
+  - -_AS_-_(Protezione_Vita)_Informazioni_Protezione_Vita_-_DIR
+  - -_AS_-_(Protezione_Vita)_Informazioni_Protezione_Vita_-_DIR_>_Voglio_saperne_di_più
+  - -_AS_-_(Protezione_Vita)_Informazioni_Protezione_Vita_-_IND_(assicurazioni-persona)
+  - -_AS_-_(Protezione_Vita)_Informazioni_Protezione_Vita_-_IND_(assicurazioni-persona)_>_Maggiori_info
+  - -_AS_-_(Protezione_Vita)_Informazioni_Protezione_Vita_-_IND_(protezione-vita)
+  - -_AS_-_(Valore_Auto)_Copertura_Cristalli_-_IND_(valore-auto)
+  - -_AS_-_(Valore_Auto)_Garanzie_-_DIR
+  - -_AS_-_(Valore_Auto)_Garanzie_-_IND_(valore-auto)
+  - -_AS_-_(Valore_Auto)_Guida_Esperta_-_IND
+  - -_AS_-_(Valore_Auto)_Incidente_in_torto_-_DIR
+  - -_AS_-_(Valore_Auto)_Incidente_in_torto_-_IND_(valore-auto)
+  - -_AS_-_(Valore_Auto)_Informazioni_su_Valore_Auto_-_DIR
+  - -_AS_-_(Valore_Auto)_Informazioni_su_Valore_Auto_-_DIR_>_Voglio_saperne_di_più
+  - -_AS_-_(Valore_Auto)_Informazioni_su_Valore_Auto_-_IND_(assicurazioni-veicolo)
+  - -_AS_-_(Valore_Auto)_Informazioni_su_Valore_Auto_-_IND_(assicurazioni-veicolo)_>_Voglio_saperne_di_più
+  - -_AS_-_(Valore_Auto)_Informazioni_su_Valore_Auto_-_IND_(valore-auto)
+  - -_AS_-_(Valore_Auto)_Quali_veicoli_posso_assicurare_-_DIR
+  - -_AS_-_(Valore_Auto)_Quali_veicoli_posso_assicurare_-_IND_(valore-auto)
+  - -_AS_-_(Valore_Auto)_Responsabilità_Civile_-_DIR
+  - -_AS_-_(Valore_Auto)_Responsabilità_Civile_-_IND_(valore-auto)
+  - -_AS_-_Assicurazioni_sul_Veicolo_-_DIR
+  - -_AS_-_Assicurazioni_sul_Veicolo_-_IND_(tipi-di-assicurazioni)
+  - -_AS_-_Assicurazioni_sulla_Casa_-_DIR
+  - -_AS_-_Assicurazioni_sulla_Casa_-_IND_(tipi-di-assicurazioni)
+  - -_AS_-_Assicurazioni_sulla_Persona_-_DIR
+  - -_AS_-_Assicurazioni_sulla_Persona_-_IND_(tipi-di-assicurazioni)
+  - -_AS_-_Informazioni_Garanzia_Assistenza_-_DIR
+  - -_AS_-_Tipi_Assicurazioni_-_DIR
+  - -_CA_-_(Carte)_Elenco_delle_carte_-_DIR
+  - -_CA_-_(Carte)_Quali_sono_le_carte_di_credito?_-_DIR
+  - -_CA_-_(Carte)_Quali_sono_le_carte_di_credito?_-_DIR_>_Mastercard_Platinum
+  - -_CA_-_(Carte)_Quali_sono_le_carte_di_credito?_-_DIR_>_Non_lo_so
+  - -_CA_-_(Carte)_Quali_sono_le_carte_di_credito?_-_DIR_>_Visa_Classic
+  - -_CA_-_(Carte)_Quali_sono_le_carte_di_debito?_-_DIR
+  - -_CA_-_(Carte)_Quali_sono_le_carte_di_debito?_-_DIR_>_Mastercard_Debit
+  - -_CA_-_(Carte)_Quali_sono_le_carte_prepagate?_-_DIR
+  - -_CA_-_(Carte)_Quali_sono_le_carte_prepagate?_-_DIR_>_Mastercard_Prepaid
+  - -_CA_-_(Chip&Pin)_Cos'è_il_Chip_and_Pin?_-_DIR
+  - -_CA_-_(Differenza_Carte)_Cos'è_una_carta_di_credito?_-_DIR
+  - -_CA_-_(Differenza_Carte)_Cos'è_una_carta_di_debito?_-_DIR
+  - -_CA_-_(Differenza_Carte)_Cos'è_una_carta_prepagata?_-_DIR
+  - -_CA_-_(Differenza_Carte)_Differenza_Credito-Debito_-_DIR
+  - -_CA_-_(Differenza_Carte)_Differenza_Credito-Prepagata_-_DIR
+  - -_CA_-_(Differenza_Carte)_Differenza_Prepagata-Debito_-_DIR
+  - -_CA_-_(Generiche)_Addebito_Pagamento_con_Carta_di_Credito_-_DIR
+  - -_CA_-_(Generiche)_Autenticazione_Forte_-_DIR
+  - -_CA_-_(Generiche)_Autorizzazione_Pendente_-_DIR
+  - -_CA_-_(Generiche)_Autorizzazione_pagamento_su_Internet_-_DIR
+  - -_CA_-_(Generiche)_Carta_Smagnetizzata_-_DIR
+  - -_CA_-_(Generiche)_Contestazione_Operazione_-_DIR
+  - -_CA_-_(Generiche)_Contestazione_Operazione_-_DIR_-_custom
+  - -_CA_-_(Generiche)_Cos'è_il_Codice_cvv?_-_DIR
+  - -_CA_-_(Generiche)_Domiciliazioni_-_DIR
+  - -_CA_-_(Generiche)_Furto_e_Smarrimento_-_DIR
+  - -_CA_-_(Generiche)_Furto_e_Smarrimento_-_DIR_>_Trovata
+  - -_CA_-_(Generiche)_Ho_dimenticato_il_PIN_-_DIR
+  - -_CA_-_(Generiche)_Il_cvv_non_è_leggibile_-_DIR
+  - -_CA_-_(Generiche)_Messaggio_Pagamento_Sconosciuto_-_DIR
+  - -_CA_-_(Generiche)_Modifica_Carta_di_appoggio_di_un_Conto_-_DIR
+  - -_CA_-_(Generiche)_PIN_sbagliato_-_DIR
+  - -_CA_-_(Generiche)_Rinnovo_Carta_-_DIR
+  - -_CA_-_(Generiche)_Ritrovamento_della_Carta_-_DIR
+  - -_CA_-_(Generiche)_Sospensione_della_carta_-_DIR
+  - -_CA_-_(Generiche)_Tempo_contabilizzazione_Carta_di_Debito_-_DIR
+  - -_CA_-_(Mastercard_Debit)_Come_si_richiede?_-_DIR
+  - -_CA_-_(Mastercard_Debit)_Come_si_richiede?_-_IND_(mastercard-debit)
+  - -_CA_-_(Mastercard_Debit)_Contactless_-_DIR
+  - -_CA_-_(Mastercard_Debit)_Contactless_-_IND_(mastercard-debit)
+  - -_CA_-_(Mastercard_Debit)_Cosa_devo_fare_quando_ricevo_la_carta?_-_IND_(mastercard-debit)
+  - -_CA_-_(Mastercard_Debit)_Costo_-_DIR
+  - -_CA_-_(Mastercard_Debit)_Costo_-_IND_(mastercard-debit)
+  - -_CA_-_(Mastercard_Debit)_Informazioni_generali_-_DIR
+  - -_CA_-_(Mastercard_Debit)_Informazioni_generali_-_IND_(mastercard-debit)
+  - -_CA_-_(Mastercard_Debit)_Notifica_-_IND_(mastercard-debit)
+  - -_CA_-_(Mastercard_Debit)_Notifica_-_IND_(mastercard-debit)_>_Non_funziona
+  - -_CA_-_(Mastercard_Debit)_Pagamento_da_smartphone_-_IND_(mastercard-debit)
+  - -_CA_-_(Mastercard_Debit)_Quanto_ci_vuole_a_riceverla?_-_IND_(mastercard-debit)
+  - -_CA_-_(Mastercard_Debit)_Rinnovo_-_IND_(mastercard-debit)
+  - -_CA_-_(Mastercard_Debit)_Scadenza_-_IND
+  - -_CA_-_(Mastercard_Debit)_Tempo_Contabilizzazione_-_IND_(mastercard-debit)
+  - -_CA_-_(Mastercard_Platinum)_Addebito_Pagamento_-_IND_(mastercard-platinum)
+  - -_CA_-_(Mastercard_Platinum)_Attivazione_Assicurazione_-_IND_(mastercard-platinum)
+  - -_CA_-_(Mastercard_Platinum)_Attivazione_assicurazione_-_DIR
+  - -_CA_-_(Mastercard_Platinum)_Copertura_Assicurativa_-_IND_(mastercard-platinum)
+  - -_CA_-_(Mastercard_Platinum)_Cosa_devo_fare_quando_ricevo_la_carta?_-_IND_(mastercard-platinum)
+  - -_CA_-_(Mastercard_Platinum)_Costi_-_DIR
+  - -_CA_-_(Mastercard_Platinum)_Costi_-_IND_(mastercard-platinum)
+  - -_CA_-_(Mastercard_Platinum)_Informazioni_generali_-_DIR
+  - -_CA_-_(Mastercard_Platinum)_Informazioni_generali_-_IND_(mastercard-platinum)
+  - -_CA_-_(Mastercard_Platinum)_Notifica_-_IND_(mastercard-platinum)
+  - -_CA_-_(Mastercard_Platinum)_Notifica_-_IND_(mastercard-platinum)_>_Non_funziona
+  - -_CA_-_(Mastercard_Platinum)_Pagamento_da_smartphone_-_IND_(mastercard-platinum)
+  - -_CA_-_(Mastercard_Platinum)_Perché_sceglierla?_-_DIR
+  - -_CA_-_(Mastercard_Platinum)_Perché_sceglierla?_-_IND
+  - -_CA_-_(Mastercard_Platinum)_Quanto_ci_vuole_a_riceverla?_-_IND_(mastercard-platinum)
+  - -_CA_-_(Mastercard_Platinum)_Rimborso_-_DIR
+  - -_CA_-_(Mastercard_Platinum)_Rimborso_-_IND_(mastercard-platinum)
+  - -_CA_-_(Mastercard_Platinum)_Rinnovo_-_IND_(mastercard-platinum)
+  - -_CA_-_(Mastercard_Platinum)_Scadenza_-_IND_(mastercard-platinum)
+  - -_CA_-_(Mastercard_Platinum)_Vantaggi_-_DIR
+  - -_CA_-_(Mastercard_Platinum)_Vantaggi_-_IND_(mastercard-platinum)
+  - -_CA_-_(Mastercard_Prepaid)_Bonifici_-_IND_(mastercard-prepaid)
+  - -_CA_-_(Mastercard_Prepaid)_Carta_Virtuale_-_IND_(mastercard-prepaid)
+  - -_CA_-_(Mastercard_Prepaid)_Cosa_devo_fare_quando_ricevo_la_carta?_-_IND_(mastercard-prepaid)
+  - -_CA_-_(Mastercard_Prepaid)_Costo_-_DIR
+  - -_CA_-_(Mastercard_Prepaid)_Costo_-_IND_(mastercard-prepaid)
+  - -_CA_-_(Mastercard_Prepaid)_Informazioni_generali_-_DIR
+  - -_CA_-_(Mastercard_Prepaid)_Informazioni_generali_-_IND_(mastercard-prepaid)
+  - -_CA_-_(Mastercard_Prepaid)_Notifica_-_IND_(mastercard-prepaid)
+  - -_CA_-_(Mastercard_Prepaid)_Notifica_-_IND_(mastercard-prepaid)_>_Non_funziona
+  - -_CA_-_(Mastercard_Prepaid)_Pagamento_da_smartphone_-_IND_(mastercard-prepaid)
+  - -_CA_-_(Mastercard_Prepaid)_Posso_usarla_subito?_-_DIR
+  - -_CA_-_(Mastercard_Prepaid)_Posso_usarla_subito?_-_IND_(mastercard-prepaid)
+  - -_CA_-_(Mastercard_Prepaid)_Quante_carte_posso_richiedere?_-_DIR
+  - -_CA_-_(Mastercard_Prepaid)_Quante_carte_posso_richiedere?_-_IND_(mastercard-prepaid)
+  - -_CA_-_(Mastercard_Prepaid)_Quanto_ci_vuole_a_riceverla?_-_IND_(mastercard-prepaid)
+  - -_CA_-_(Mastercard_Prepaid)_Rinnovo_-_IND_(mastercard-prepaid)
+  - -_CA_-_(Mastercard_Prepaid)_Scadenza_-_IND_(mastercard-prepaid)
+  - -_CA_-_(Visa_Classic)_Cosa_devo_fare_quando_ricevo_la_carta?_-_IND_(visa-classic)
+  - -_CA_-_(Visa_Classic)_Costo_-_DIR
+  - -_CA_-_(Visa_Classic)_Costo_-_IND_(visa-classic)
+  - -_CA_-_(Visa_Classic)_Informazioni_generali_-_DIR
+  - -_CA_-_(Visa_Classic)_Informazioni_generali_-_IND_(visa-classic)
+  - -_CA_-_(Visa_Classic)_Notifica_-_IND_(visa-classic)
+  - -_CA_-_(Visa_Classic)_Notifica_-_IND_(visa-classic)_>_Non_funziona
+  - -_CA_-_(Visa_Classic)_Pagamento_da_smartphone_-_IND_(visa-classic)
+  - -_CA_-_(Visa_Classic)_Quanto_ci_vuole_a_riceverla?_-_IND_(visa-classic)
+  - -_CA_-_(Visa_Classic)_Rimborso_a_saldo_e_rateale_-_DIR
+  - -_CA_-_(Visa_Classic)_Rimborso_a_saldo_e_rateale_-_IND_(visa-classic)
+  - -_CA_-_(Visa_Classic)_Rinnovo_-_IND_(visa-classic)
+  - -_CA_-_(Visa_Classic)_Scadenza_-_IND_(visa-classic)
+  - -_CC_-_(Sella_Premium)_Altri_Servizi_Sella_Premium_-_DIR
+  - -_CC_-_(Sella_Premium)_Altri_Servizi_Sella_Premium_-_IND_(sella-premium)
+  - -_CC_-_(Sella_Premium)_Cos'è_il_Sella_Premium_-_IND_(sella-premium)
+  - -_CC_-_(Sella_Premium)_Cos'è_il_Sella_Premium_-_IND_(tipi-di-conto)
+  - -_CC_-_(Sella_Premium)_Cos'è_il_Sella_Premium?_-_DIR
+  - -_CC_-_(Sella_Premium)_Costo_Sella_Premium_-_DIR
+  - -_CC_-_(Sella_Premium)_Costo_Sella_Premium_-_IND_(sella-premium)
+  - -_CC_-_(Sella_Premium)_Servizi_Sella_Premium_-_DIR
+  - -_CC_-_(Sella_Premium)_Servizi_Sella_Premium_-_IND_(sella-premium)
+  - -_CC_-_(Sella_Premium)_Servizi_Sella_Premium_-_IND_(tipi-di-conto)
+  - -_CC_-_(Sella_Premium)_Servizi_in_comune_-_(sella-premium)
+  - -_CC_-_(Sella_Start)_Altri_Servizi_Sella_Start_-_IND_(sella-start)
+  - -_CC_-_(Sella_Start)_Cos'è_il_Sella_Start?_-_DIR
+  - -_CC_-_(Sella_Start)_Cos'è_il_Sella_Start?_-_IND_(sella-start)
+  - -_CC_-_(Sella_Start)_Cos'è_il_Sella_Start?_-_IND_(tipi-di-conto)
+  - -_CC_-_(Sella_Start)_Costo_Sella_Start_-_DIR
+  - -_CC_-_(Sella_Start)_Costo_Sella_Start_-_IND_(sella-start)
+  - -_CC_-_(Sella_Start)_Servizi_Sella_Start_-_DIR
+  - -_CC_-_(Sella_Start)_Servizi_Sella_Start_-_IND_(sella-start)
+  - -_CC_-_(Sella_Start)_Servizi_Sella_Start_-_IND_(tipi-di-conto)
+  - -_CC_-_Accesso_al_conto_-_DIR
+  - -_CC_-_Carte_incluse_-_DIR
+  - -_CC_-_Carte_incluse_-_IND_(conti-generico)
+  - -_CC_-_Chi_può_aprire_un_conto_-_DIR
+  - -_CC_-_Chi_può_aprire_un_conto_-_IND_(conti-generico)
+  - -_CC_-_Come_firmare_i_doc_(Sella_Digit)_-_DIR
+  - -_CC_-_Come_firmare_i_doc_(Sella_Digit)_-_IND_(conti-generico)
+  - -_CC_-_Come_si_chiamava_l'altro_conto?_-_IND_(sella-premium)
+  - -_CC_-_Come_si_chiamava_l'altro_conto?_-_IND_(sella-start)
+  - -_CC_-_Credenziali_-_DIR
+  - -_CC_-_Credenziali_-_IND_(conti-generico)
+  - -_CC_-_Documenti_necessari_-_DIR
+  - -_CC_-_Documenti_necessari_-_IND_(conti-generico)
+  - -_CC_-_Ho_già_Digit_-_FOLLOWUP
+  - -_CC_-_Ho_già_Digit_-_FOLLOWUP_IND
+  - -_CC_-_Meno_di_18_anni_&_Residenza_-_DIR
+  - -_CC_-_Meno_di_18_anni_&_Residenza_-_IND_(conti-generico)
+  - -_CC_-_Numero_cointestatari_-_DIR
+  - -_CC_-_Numero_cointestatari_-_IND_(conti-generico)
+  - -_CC_-_Quale_Carta_è_inclusa_-_DIR
+  - -_CC_-_Quali_sono_i_tipi_di_conto?_-_DIR
+  - -_CC_-_Quali_sono_i_tipi_di_conto?_-_DIR_-_repeat
+  - -_CC_-_Quali_sono_i_tipi_di_conto?_-_DIR_->_Non_lo_so
+  - -_CC_-_Sono_già_cliente_-_DIR
+  - -_CC_-Sono_già_cliente_-_IND_(conti-generico)
+  - -_GEN_-_(Dati_Account)_Modifica_Informazioni_Personali_-_DIR
+  - -_PR_-_(ATFS)_Dipendenti_Pubblici_-_DIR
+  - -_PR_-_(ATFS)_Dipendenti_Pubblici_-_IND_(anticipo-trattamento-fine-servizio)
+  - -_PR_-_(ATFS)_Importi_eccedenti_-_DIR
+  - -_PR_-_(ATFS)_Importi_eccedenti_-_IND_(anticipo-trattamento-fine-servizio)
+  - -_PR_-_(ATFS)_Informazioni_sull'Anticipo_Trattamento_-_IND_(anticipo-trattamento-fine-servizio)
+  - -_PR_-_(ATFS)_Informazioni_sull'Anticipo_Trattamento_di_Fine_Servizio_-_DIR
+  - -_PR_-_(ATFS)_Istruttoria_-_IND_(anticipo-trattamento-fine-servizio)
+  - -_PR_-_(ATFS)_Modalità_richiesta_-_DIR
+  - -_PR_-_(ATFS)_Modalità_richiesta_-_IND_(anticipo-trattamento-fine-servizio)
+  - -_PR_-_(ATFS)_Rimborso_-_DIR
+  - -_PR_-_(ATFS)_Rimborso_-_IND_(anticipo-trattamento-fine-servizio)
+  - -_PR_-_(ATFS)_Vincoli_-_DIR
+  - -_PR_-_(ATFS)_Vincoli_-_IND_(anticipo-trattamento-fine-servizio)
+  - -_PR_-_(Cessione_del_Quinto_Pensione)_Chi_può_fare_il_finanziamento_-_DIR
+  - -_PR_-_(Cessione_del_Quinto_Pensione)_Chi_può_fare_il_finanziamento_-_IND_(cessione-quinto-pensione)
+  - -_PR_-_(Cessione_del_Quinto_Pensione)_Destinazione_denaro_-_IND_(cessione-quinto-pensione)
+  - -_PR_-_(Cessione_del_Quinto_Pensione)_Durata_-_DIR
+  - -_PR_-_(Cessione_del_Quinto_Pensione)_Durata_-_IND_(cessione-quinto-pensione)
+  - -_PR_-_(Cessione_del_Quinto_Pensione)_Informazioni_sul_finanziamento_-_DIR
+  - -_PR_-_(Cessione_del_Quinto_Pensione)_Informazioni_sul_finanziamento_-_IND_(cessione-quinto-pensione)
+  - -_PR_-_(Cessione_del_Quinto_Pensione)_Maggiori_info_-_IND_(cessione-quinto-pensione)
+  - -_PR_-_(Cessione_del_Quinto_Pensione)_Rimborso_-_DIR
+  - -_PR_-_(Cessione_del_Quinto_Pensione)_Rimborso_-_IND_(cessione-quinto-pensione)
+  - -_PR_-_(Cessione_del_Quinto_Pensione)_Tasso_-_DIR
+  - -_PR_-_(Cessione_del_Quinto_Pensione)_Tasso_-_IND_(cessione-quinto-pensione)
+  - -_PR_-_(Cessione_del_Quinto_Stipendio)_Assicurazione_-_DIR
+  - -_PR_-_(Cessione_del_Quinto_Stipendio)_Assicurazione_-_IND_(cessione-quinto-stipendio)
+  - -_PR_-_(Cessione_del_Quinto_Stipendio)_Convenzioni_Speciali_-_IND_(cessione-quinto-stipendio)
+  - -_PR_-_(Cessione_del_Quinto_Stipendio)_Destinatari_-_DIR
+  - -_PR_-_(Cessione_del_Quinto_Stipendio)_Destinatari_-_IND_(cessione-quinto-stipendio)
+  - -_PR_-_(Cessione_del_Quinto_Stipendio)_Destinazione_denaro_-_IND_(cessione-quinto-stipendio)
+  - -_PR_-_(Cessione_del_Quinto_Stipendio)_Informazioni_finanziamento_-_IND_(cessione-quinto-stipendio)
+  - -_PR_-_(Cessione_del_Quinto_Stipendio)_Informazioni_sul_finanziamento_-_DIR
+  - -_PR_-_(Cessione_del_Quinto_Stipendio)_Maggiori_info_-_IND_(cessione-quinto-stipendio)
+  - -_PR_-_(Cessione_del_Quinto_Stipendio)_Privati_-_(cessione-quinto-stipendio)
+  - -_PR_-_(Cessione_del_Quinto_Stipendio)_Privati_-_DIR
+  - -_PR_-_(Cessione_del_Quinto_Stipendio)_Rimborso_-_DIR
+  - -_PR_-_(Cessione_del_Quinto_Stipendio)_Rimborso_-_IND_(cessione-quinto-stipendio)
+  - -_PR_-_(Cessione_del_Quinto)_Informazioni_generali
+  - -_PR_-_(Cessione_del_Quinto)_Informazioni_generali_-_DIR_>_Pensione
+  - -_PR_-_(Cessione_del_Quinto)_Informazioni_generali_-_DIR_>_Pensione_-_yes
+  - -_PR_-_(Cessione_del_Quinto)_Informazioni_generali_-_DIR_>_Stipendio
+  - -_PR_-_(Cessione_del_Quinto)_Informazioni_generali_-_DIR_>_Stipendio_-_yes
+  - -_PR_-_(Leasing_Autoveicoli)_Cadenza_canoni_-_DIR
+  - -_PR_-_(Leasing_Autoveicoli)_Cadenza_canoni_-_IND_(leasing-autoveicoli)
+  - -_PR_-_(Leasing_Autoveicoli)_Costi_-_DIR
+  - -_PR_-_(Leasing_Autoveicoli)_Costi_-_IND_(leasing-autoveicoli)
+  - -_PR_-_(Leasing_Autoveicoli)_Durata_-_DIR
+  - -_PR_-_(Leasing_Autoveicoli)_Durata_-_IND_(leasing-autoveicoli)
+  - -_PR_-_(Leasing_Autoveicoli)_Importo_-_DIR
+  - -_PR_-_(Leasing_Autoveicoli)_Importo_-_IND
+  - -_PR_-_(Leasing_Autoveicoli)_Informazioni_generiche_-_DIR
+  - -_PR_-_(Leasing_Autoveicoli)_Informazioni_generiche_-_IND_(leasing-autoveicoli)
+  - -_PR_-_(Leasing_Autoveicoli)_Riscatto_Finale_-_DIR
+  - -_PR_-_(Leasing_Autoveicoli)_Riscatto_Finale_-_IND_(leasing-autoveicoli)
+  - -_PR_-_(Leasing_Autoveicoli)_Tassi_di_interesse_-_DIR
+  - -_PR_-_(Leasing_Autoveicoli)_Tassi_di_interesse_-_IND_(leasing-autoveicoli)
+  - -_PR_-_(Leasing_Autoveicoli)_Vincoli_-_DIR
+  - -_PR_-_(Leasing_Autoveicoli)_Vincoli_-_IND_(leasing-autoveicoli)
+  - -_PR_-_(Leasing_Nautico)_Cadenza_Canoni_-_DIR
+  - -_PR_-_(Leasing_Nautico)_Cadenza_Canoni_-_IND_(leasing-nautico)
+  - -_PR_-_(Leasing_Nautico)_Costi_-_DIR
+  - -_PR_-_(Leasing_Nautico)_Costi_-_IND_(leasing-nautico)
+  - -_PR_-_(Leasing_Nautico)_Durata_-_DIR
+  - -_PR_-_(Leasing_Nautico)_Durata_-_IND_(leasing-nautico)
+  - -_PR_-_(Leasing_Nautico)_Importo_-_DIR
+  - -_PR_-_(Leasing_Nautico)_Importo_-_IND_(leasing-nautico)
+  - -_PR_-_(Leasing_Nautico)_Informazioni_generiche_-_DIR
+  - -_PR_-_(Leasing_Nautico)_Informazioni_generiche_-_IND_(leasing-nautico)
+  - -_PR_-_(Leasing_Nautico)_Leasing_Sicurezza_-_IND_(leasing-nautico)
+  - -_PR_-_(Leasing_Nautico)_Leasing_Sicurezza_-_IND_(leasing-nautico)_-_yes
+  - -_PR_-_(Leasing_Nautico)_Tassi_di_interesse_-_DIR
+  - -_PR_-_(Leasing_Nautico)_Tassi_di_interesse_-_IND_(leasing-nautico)
+  - -_PR_-_(Leasing_Nautico)_Vincoli_-_DIR
+  - -_PR_-_(Leasing_Nautico)_Vincoli_-_IND_(leasing-nautico)
+  - -_PR_-_(Leasing_Sicurezza)_Copertura_-_DIR
+  - -_PR_-_(Leasing_Sicurezza)_Copertura_-_IND_(leasing-sicurezza)
+  - -_PR_-_(Leasing_Sicurezza)_Durata_-_DIR
+  - -_PR_-_(Leasing_Sicurezza)_Durata_-_IND_(leasing-sicurezza)
+  - -_PR_-_(Leasing_Sicurezza)_Importo_-_DIR
+  - -_PR_-_(Leasing_Sicurezza)_Importo_-_IND_(leasing-sicurezza)
+  - -_PR_-_(Leasing_Sicurezza)_Informazioni_generiche_-_DIR
+  - -_PR_-_(Leasing_Sicurezza)_Informazioni_generiche_-_IND_(leasing-sicurezza)
+  - -_PR_-_(Leasing)_Informazioni_sui_Leasing_-_DIR
+  - -_PR_-_(Leasing)_Informazioni_sui_Leasing_-_DIR_>_Nautico
+  - -_PR_-_(Leasing)_Informazioni_sui_Leasing_-_DIR_>_Veicolo
+  - -_PR_-_(Mutuo_Green)_Informazioni_Mutuo_Green_-_DIR
+  - -_PR_-_(Mutuo_Green)_Informazioni_Mutuo_Green_-_DIR_>_Più_dettagli
+  - -_PR_-_(Mutuo_Green)_Informazioni_Mutuo_Green_-_DIR_>_Più_dettagli_-_custom
+  - -_PR_-_(Mutuo)_Che_cos'è_il_mutuo_-_DIR
+  - -_PR_-_(Mutuo)_Che_cos'è_il_mutuo_-_DIR_>_Opzioni
+  - -_PR_-_(Mutuo)_Che_cos'è_il_mutuo_-_IND_(mutuo)
+  - -_PR_-_(Mutuo)_Fondo_di_Garanzia_Prima_Casa_-_DIR
+  - -_PR_-_(Mutuo)_Fondo_di_Garanzia_Prima_Casa_-_IND_(mutuo-tassi)
+  - -_PR_-_(Mutuo)_Tasso_fisso_-_DIR
+  - -_PR_-_(Mutuo)_Tasso_fisso_-_IND_(mutuo-tassi)
+  - -_PR_-_(Mutuo)_Tasso_variabile_-_DIR
+  - -_PR_-_(Mutuo)_Tasso_variabile_-_IND_(mutuo-tassi)
+  - -_PR_-_(Noleggio)_Auto_Temporanea_-_DIR
+  - -_PR_-_(Noleggio)_Auto_Temporanea_-_IND_(noleggio-lungo-termine)
+  - -_PR_-_(Noleggio)_Costo_-_DIR
+  - -_PR_-_(Noleggio)_Costo_-_IND_(noleggio-lungo-termine)
+  - -_PR_-_(Noleggio)_Durata_-_DIR
+  - -_PR_-_(Noleggio)_Durata_-_IND_(noleggio-lungo-termine)
+  - -_PR_-_(Noleggio)_Informazioni_generiche_-_DIR
+  - -_PR_-_(Noleggio)_Informazioni_generiche_-_IND_(noleggio-lungo-termine)
+  - -_PR_-_(Noleggio)_Permuta_-_DIR
+  - -_PR_-_(Noleggio)_Permuta_-_IND_(noleggio-lungo-termine)
+  - -_PR_-_(Noleggio)_Servizi_-_DIR
+  - -_PR_-_(Noleggio)_Servizi_-_IND_(noleggio-lungo-termine)
+  - -_PR_-_(Noleggio)_Valutazione_usato_-_IND_(noleggio-lungo-termine)
+  - -_PR_-_(Prestito_Green)_Condizioni_-_DIR
+  - -_PR_-_(Prestito_Green)_Condizioni_-_IND_(prestito-green)
+  - -_PR_-_(Prestito_Green)_Finalità_Auto_-_IND_(finalita-prestito-green)
+  - -_PR_-_(Prestito_Green)_Finalità_Climatizzazione_-_IND_(finalita-prestito-green)
+  - -_PR_-_(Prestito_Green)_Finalità_Elettrodomestici_-_IND_(finalita-prestito-green)
+  - -_PR_-_(Prestito_Green)_Finalità_Impianto_Fotovoltaico_-_IND_(finalita-prestito-green)
+  - -_PR_-_(Prestito_Green)_Finalità_Isolamento_-_IND_(finalita-prestito-green)
+  - -_PR_-_(Prestito_Green)_Finalità_Ricarica_veicoli_-_IND_(finalita-prestito-green)
+  - -_PR_-_(Prestito_Green)_Finalità_Serramenti_-_IND_(finalita-prestito-green)
+  - -_PR_-_(Prestito_Green)_Informazioni_sul_Prestito_Green_-_DIR
+  - -_PR_-_(Prestito_Green)_Informazioni_sul_Prestito_Green_-_IND_(prestito-green)
+  - -_PR_-_(Prestito_Green)_Informazioni_sul_Prestito_Green_-_IND_(tipi-di-prestito)
+  - -_PR_-_(Prestito_Green)_Per_cosa_posso_usarlo?_-_DIR
+  - -_PR_-_(Prestito_Green)_Per_cosa_posso_usarlo?_-_IND_(prestito-green)
+  - -_PR_-_(Prestito_Green)_Periodo_Preammortamento_-_DIR
+  - -_PR_-_(Prestito_Green)_Periodo_Preammortamento_-_IND_(prestito-green)
+  - -_PR_-_(Prestito_ProntoTuo)_Condizioni_-_DIR
+  - -_PR_-_(Prestito_ProntoTuo)_Condizioni_-_IND_(prestito-prontotuo)
+  - -_PR_-_(Prestito_ProntoTuo)_Documenti_-_DIR
+  - -_PR_-_(Prestito_ProntoTuo)_Documenti_-_IND_(prestito-prontotuo)
+  - -_PR_-_(Prestito_ProntoTuo)_Importi_-_DIR
+  - -_PR_-_(Prestito_ProntoTuo)_Importi_-_IND_(prestito-prontotuo)
+  - -_PR_-_(Prestito_ProntoTuo)_Informazioni_sul_prestito_ProntoTuo_-_DIR
+  - -_PR_-_(Prestito_ProntoTuo)_Informazioni_sul_prestito_ProntoTuo_-_IND_(prestiti-personali)
+  - -_PR_-_(Prestito_ProntoTuo)_Informazioni_sul_prestito_ProntoTuo_-_IND_(prestito-prontotuo)
+  - -_PR_-_(Prestito_d'Onore)_Come_usare_il_prestito_-_DIR
+  - -_PR_-_(Prestito_d'Onore)_Come_usare_il_prestito_-_IND_(prestito-onore)
+  - -_PR_-_(Prestito_d'Onore)_Informazioni_sul_prestito_d'onore_-_DIR
+  - -_PR_-_(Prestito_d'Onore)_Informazioni_sul_prestito_d'onore_-_IND_(prestiti-personali)
+  - -_PR_-_(Prestito_d'Onore)_Informazioni_sul_prestito_d'onore_-_IND_(prestito-onore)
+  - -_PR_-_(Prestito_d'Onore)_Restituizione_-_DIR
+  - -_PR_-_(Prestito_d'Onore)_Restituizione_-_IND_(prestito-onore)
+  - -_PR_-_Prestiti_Personali_-_DIR
+  - -_PR_-_Tipi_Prestito_-_DIR
+  - -_Rivela_Par
+  - -_Salva_Par
+  - -_Tempo
+  - -_richiedere_prelievo
+
+  entities: 
+  - operazione_accredito
+  - number
+  - currency-name
+  - nome-conto
+  - location
+  - operazione_prelievo
+  - valuta
+
+
+responses:
+  utter_-_(CONTEXT)_-_Anticipo_Trattamento_di_Fine_Servizio_-_DIR:
+  - text : "Se ti interessa conoscere di più sull'Anticipo del Trattamento di Fine Servizio, posso fornirti una descrizione generale sul prodotto oppure rispondere ad alcune domande più specifiche. Per esempio, puoi chiedermi qualcosa a proposito dei destinatari o del rimborso."
+  utter_-_(CONTEXT)_-_Casa_e_Famiglia_-_DIR:
+  - text : "Riguardo l'assicurazione Casa e Famiglia posso fornirti una descrizione generica oppure posso rispondere a domande specifiche riguardanti costi ed eventi coperti. Scegli tu che cosa chiedermi!"
+  utter_-_(CONTEXT)_-_Cessione_del_Quinto_Pensione_-_DIR:
+  - text : "Se sei interessato alla Cessione del Quinto dello Pensione, posso fornirti una descrizione generale riguardo al finanziamento. Posso anche rispondere a domande più specifiche, per esempio sui destinatari e sulla durata del contratto. Scegli tu cosa chiedermi!"
+  utter_-_(CONTEXT)_-_Cessione_del_Quinto_Stipendio_-_DIR:
+  - text : "Se sei interessato alla Cessione del Quinto dello Stipendio, posso fornirti una descrizione generale riguardo al finanziamento. Posso anche rispondere a domande più specifiche, sui destinatari e sulle convenzioni offerte. Scegli tu cosa chiedermi!"
+  utter_-_(CONTEXT)_-_Leasing_Autoveicoli_-_DIR:
+  - text : "Se ti interessa il Leasing Autoveicoli, posso fornirti una descrizione generale del prestito oppure rispondere ad alcune domande specifiche, ad esempio sui costi, durata, canoni e importi. Scegli tu che domanda fare!"
+  utter_-_(CONTEXT)_-_Leasing_Nautico_-_DIR:
+  - text : "Posso fornirti una descrizione generale del Leasing Nautico, oppure rispondere ad alcune domande più specifiche. Puoi chiedermi qualcosa riguardo i costi, gli importi, la durata e i tassi di interesse del prestito. Scegli tu la domanda da farmi!"
+  utter_-_(CONTEXT)_-_Leasing_Sicurezza_-_DIR:
+  - text : "A proposito del Leasing Sicurezza, posso fornirti una descrizione generica oppure rispondere alle tue domande riguardo durata e importo del contratto. Scegli tu cosa chiedermi!"
+  utter_-_(CONTEXT)_-_Mastercard_Debit_-_DIR:
+  - text : "A proposito di Mastercard Debit posso fornirti una descrizione generica del prodotto oppure posso rispondere a domande specifiche, per esempio riguardanti costi e rinnovi. Scegli tu che cosa chiedermi!"
+  utter_-_(CONTEXT)_-_Mastercard_Platinum_-_DIR:
+  - text : " A proposito di Mastercard Platinum posso fornirti una descrizione generica del prodotto oppure posso rispondere a domande specifiche, per esempio riguardanti costi e rinnovi. Scegli tu che cosa chiedermi!"
+  utter_-_(CONTEXT)_-_Mastercard_Prepaid_-_DIR:
+  - text : " A proposito di Mastercard Prepaid posso fornirti una descrizione generica del prodotto oppure posso rispondere a domande specifiche, per esempio riguardanti costi e rinnovi. Scegli tu che cosa chiedermi!"
+  utter_-_(CONTEXT)_-_Mutuo_-_DIR:
+  - text : "Se ti interessa un mutuo posso fornirti tutte le informazioni che ti servono riguardo tassi di interesse e opzioni specifiche del mutuo. Se ti interessa, posso anche parlarti del Prestito Green. Scegli tu la domanda da fare!"
+  utter_-_(CONTEXT)_-_Noleggio_Lungo_Termine_-_DIR:
+  - text : "Se sei interessato al noleggio a lungo termine, posso fornirti diverse informazioni a proposito di costi, durata e servizi. Puoi scegliere tu cosa chiedermi!"
+  utter_-_(CONTEXT)_-_Persona_in_Chiaro_-_DIR:
+  - text : "Riguardo Persona in Chiaro posso fornirti una descrizione generica oppure posso rispondere a domande specifiche, ad esempio riguardanti le garanzie fornite. Scegli tu che cosa chiedermi!"
+  utter_-_(CONTEXT)_-_Prestito_Green_-_DIR:
+  - text : " Riguardo il prestito green posso fornirti una descrizione generica oppure posso rispondere a domande specifiche riguardanti condizioni e finalità del prestito. Scegli tu che cosa chiedermi!"
+  utter_-_(CONTEXT)_-_Prestito_Prontotuo_-_DIR:
+  - text : "A proposito del Prestito ProntoTuo posso fornirti una descrizione generica oppure rispondere ad alcune domande specifiche. Puoi chiedermi le condizioni, i costi e la durata del prestito. Scegli tu che domanda fare!"
+  utter_-_(CONTEXT)_-_Prestito_dOnore_-_DIR:
+  - text : "Riguardo il prestito d'onore posso fornirti una descrizione generica oppure posso rispondere a domande specifiche riguardanti finalità e metodi di restituzione del prestito. Scegli tu che cosa chiedermi!"
+  utter_-_(CONTEXT)_-_Protezione_Vita_-_DIR:
+  - text : "Riguardo l'assicurazione Protezione Vita posso fornirti una descrizione generica oppure posso rispondere a domande specifiche, ad esempio riguardanti costi e durata. Scegli tu che cosa chiedermi!"
+  utter_-_(CONTEXT)_-_Sella_Premium_-_DIR:
+  - text : "Riguardo il conto Sella Premium posso fornirti una descrizione generica oppure posso rispondere a domande specifiche riguardanti costi e servizi del prodotto. Scegli tu che cosa chiedermi!"
+  utter_-_(CONTEXT)_-_Sella_Start_-_DIR:
+  - text : "Riguardo il conto Sella Start posso fornirti una descrizione generica oppure posso rispondere a domande specifiche riguardanti i servizi e i costi. Scegli tu che cosa chiedermi!"
+  utter_-_(CONTEXT)_-_Valore_Auto_-_DIR:
+  - text : "Riguardo l'assicurazione Valore Auto posso fornirti una descrizione generica oppure posso rispondere a domande specifiche , per esempio riguardanti garanzie e responsabilità civile. Scegli tu che cosa chiedermi!"
+  utter_-_(CONTEXT)_-_Visa_Classic_-_DIR:
+  - text : "A proposito di Visa Classic posso fornirti una descrizione generica del prodotto oppure posso rispondere a domande specifiche, per esempio riguardanti costi e rinnovi. Scegli tu che cosa chiedermi!"
+  utter_-_(DEF)_-_Chiusura:
+  - text : "Spero di esserti stato utile, alla prossima"
+  utter_-_(DEF)_-_Cosa_posso_fare?:
+  - text : "Puoi farmi delle domande sui servizi e sui prodotti offerti da Banca Sella. Chiedimi quello che vuoi, proverò ad aiutarti!"
+  utter_-_(DEF)_-_Grazie:
+  - text : "Per me è un piacere essere d'aiuto!"
+  utter_-_(DEF)_-_Servizi+Prodotti:
+  - text : "Tra i servizi e i prodotti offerti da Banca Sella ci sono conti correnti, carte di credito, di debito, prepagate, assicurazioni e prestiti. Chiedimi tu informazioni sul prodotto che ti interessa di più!"
+  utter_-_(DEF)_-_Welcome_:
+  - text : "Ciao! Sono l'Assistente vocale Wox Edge. Posso fornirti le informazioni di cui hai bisogno sui prodotti e servizi offerti da Banca Sella. Cosa vorresti sapere?"
+  utter_-_(LOG)_-_Accredito_Denaro_>_no_+_modifica,:
+  - text : "vedi dal fullfilment"
+  utter_-_(LOG)_-_Accredito_Denaro_>_sì:
+  - text : "vedi dal fullfilment"
+  utter_-_(LOG)_-_Accredito_Denaro,:
+  - text : "vedi dal fullfilment"
+  utter_-_(LOG)_-_Elenco_Conti:
+  - text : "vedi dal fullfilment"
+  utter_-_(LOG)_-_Lista_Ultimi_Movimenti_LIM:
+  - text : "vedi dal fullfilment"
+  utter_-_(LOG)_-_Prelevare_Denaro_>_no:
+  - text : "vedi dal fullfilment"
+  utter_-_(LOG)_-_Prelevare_Denaro_>_no_+_modifica,:
+  - text : "vedi dal fullfilment"
+  utter_-_(LOG)_-_Prelevare_Denaro_>_sì:
+  - text : "vedi dal fullfilment"
+  utter_-_(LOG)_-_Prelevare_Denaro,:
+  - text : "vedi dal fullfilment"
+  utter_-_(LOG)_-_Saldo_Disponibile_su_Conto:
+  - text : "vedi dal fullfilment"
+  utter_-_(LOG)_-_Saldo_Disponibile_su_Conto,:
+  - text : "vedi dal fullfilment"
+  utter_-_(LOG)_-_Specificare_Nome_Conto_per_Prelievo,:
+  - text : "vedi dal fullfilment"
+  utter_-_(LOG)_-_Specificare_Nome_Conto_per_Ricarica,:
+  - text : "vedi dal fullfilment"
+  utter_-_(LOG)_-_Specificare_Nome_Conto_per_Saldo_Disponibile,:
+  - text : "vedi dal fullfilment"
+  utter_-_(LOG)_-_Spiegazioni_Specificare_Nome_Conto_per_Prelievo:
+  - text : "vedi dal fullfilment"
+  utter_-_(LOG)_-_Spiegazioni_Specificare_Nome_Conto_per_Ricarica:
+  - text : "vedi dal fullfilment"
+  utter__AS_(Casa_e_Famiglia)_Assistenza_DIR:
+  - text : "Casa e Famiglia prevede un servizio di assistenza immediato, al verificarsi di una situazione di emergenza, come ad esempio una perdita d'acqua in casa oppure consulenze veterinarie."
+  utter__AS_(Casa_e_Famiglia)_Assistenza_IND_(casaefamiglia):
+  - text : "Casa e Famiglia prevede un servizio di assistenza immediato, al verificarsi di una situazione di emergenza, come ad esempio una perdita d'acqua in casa oppure consulenze veterinarie."
+  utter__AS_(Casa_e_Famiglia)_Comfort_IND_(casaefamiglia):
+  - text : " Il pacchetto Comfort prevede la copertura di tutela legale, rc vita privata e fabbricato, incendio, assistenza casa, assistenza famiglia e pet."
+  utter__AS_(Casa_e_Famiglia)_Costi_DIR:
+  - text : "Casa e Famiglia ha tre diversi pacchetti small, comfort e deluxe. Tutti comprendono rc vita privata, fabbricato e tutele legali. I costi dipendono da diversi fattori, tra cui posizione e dimensione della casa. Puoi chiedermi i dettagli di ciascun pacchetto."
+  utter__AS_(Casa_e_Famiglia)_Costi_IND_(casaefamiglia):
+  - text : " Casa e Famiglia ha tre diversi pacchetti small, comfort e deluxe. Tutti comprendono rc vita privata, fabbricato e tutele legali. I costi dipendono da diversi fattori, tra cui posizione e dimensione della casa. Puoi chiedermi i dettagli di ciascun pacchetto."
+  utter__AS_(Casa_e_Famiglia)_Deluxe_IND_(casaefamiglia):
+  - text : "Il pacchetto Deluxe prevede la copertura di tutela lega, rc vita privata e fabbricato, incendio, assistenza casa, assistenza famiglia e pet, furto."
+  utter__AS_(Casa_e_Famiglia)_Eventi_coperti_DIR:
+  - text : "La polizza ti copre in caso di incendio, con danni all'immobile e al contenuto; furto, compresi anche danni da rapina e scippo; responsabilità civile della famiglia, con danni arrecati accidentalmente a terzi per fatti inerenti la proprietà; tutela legale, per le spese legate alla difesa dei tuoi diritti."
+  utter__AS_(Casa_e_Famiglia)_Eventi_coperti_IND_(casaefamiglia):
+  - text : "La polizza ti copre in caso di incendio, con danni all'immobile e al contenuto; furto, compresi anche danni da rapina e scippo; responsabilità civile della famiglia, con danni arrecati accidentalmente a terzi per fatti inerenti la proprietà; tutela legale, per le spese legate alla difesa dei tuoi diritti."
+  utter__AS_(Casa_e_Famiglia)_Informazioni_Casa_e_Famiglia_DIR:
+  - text : "Posso fornirti informazioni sui costi e darti maggiori spiegazioni sugli eventi coperti. Scegli tu cosa chiedermi!"
+  utter__AS_(Casa_e_Famiglia)_Informazioni_Casa_e_Famiglia_DIR_>_Voglio_saperne_di_più:
+  - text : "L'assicurazione Casa e Famiglia offre una copertura sia per la tua casa che per il suo contenuto, oltre che per tutti i componenti della tua famiglia. È ideale per proprietari di casa ed anche per affittuari. In base alle tue esigenze, potrai attivare il pacchetto Small, Comfort o Deluxe."
+  utter__AS_(Casa_e_Famiglia)_Informazioni_Casa_e_Famiglia_IND_(assicurazionicasa):
+  - text : "L'assicurazione Casa e Famiglia offre una copertura sia per la tua casa che per il suo contenuto, oltre che per tutti i componenti della tua famiglia. È ideale per proprietari di casa ed anche per affittuari. In base alle tue esigenze, potrai attivare il pacchetto Small, Comfort o Deluxe."
+  utter__AS_(Casa_e_Famiglia)_Informazioni_Casa_e_Famiglia_IND_(assicurazionicasa)>_Voglio_sapere_di_più:
+  - text : "Posso fornirti informazioni sui costi e darti maggiori spiegazioni sugli eventi coperti. Scegli tu cosa chiedermi!"
+  utter__AS_(Casa_e_Famiglia)_Informazioni_Casa_e_Famiglia_IND_(casaefamiglia):
+  - text : "L'assicurazione Casa e Famiglia offre una copertura sia per la tua casa che per il suo contenuto, oltre che per tutti i componenti della tua famiglia. È ideale per proprietari di casa ed anche per affittuari. In base alle tue esigenze, potrai attivare il pacchetto Small, Comfort o Deluxe."
+  utter__AS_(Casa_e_Famiglia)_Small_IND_(casaefamiglia):
+  - text : "Il pacchetto Small prevede la copertura di tutela legale, rc vita privata e fabbricato."
+  utter__AS_(Persona_in_Chiaro)_Cambio_Lavoro_DIR:
+  - text : "Se cambi lavoro sei tenuto a comunicare ad HDI la modifica dell'attività. Sarà necessario sostituire il contratto assicurativo e recepire il cambio. La modifica del contratto può comportare una variazione del premio."
+  utter__AS_(Persona_in_Chiaro)_Cambio_Lavoro_IND_(personainchiaro):
+  - text : "Se cambi lavoro sei tenuto a comunicare ad HDI la modifica dell'attività. Sarà necessario sostituire il contratto assicurativo e recepire il cambio. La modifica del contratto può comportare una variazione del premio."
+  utter__AS_(Persona_in_Chiaro)_Garanzie_Aggiuntive_DIR:
+  - text : "La polizza prevede già l'attivazione delle garanzie di Invalidità Permanente e di Assistenza. Oltre a queste, si possono attivare le seguenti protezioni Morte in conseguenza a un infortunio, diaria da ricovero, convalescenza, gesso e spese mediche a seguito di infortunio."
+  utter__AS_(Persona_in_Chiaro)_Garanzie_Aggiuntive_IND_(personainchiaro):
+  - text : "La polizza prevede già l'attivazione delle garanzie di Invalidità Permanente e di Assistenza. Oltre a queste, si possono attivare le seguenti protezioni Morte in conseguenza a un infortunio, diaria da ricovero, convalescenza, gesso e spese mediche a seguito di infortunio."
+  utter__AS_(Persona_in_Chiaro)_Informazioni_Persona_In_Chiaro_DIR:
+  - text : "L'assicurazione Persona In Chiaro protegge in caso di infortuni nella vita professionale e privata. Puoi proteggere chi vuoi, la tua famiglia o i tuoi collaboratori. La polizza, inoltre, è personalizzabile e vale in tutto il mondo. La copertura comprende anche la garanzia Assistenza."
+  utter__AS_(Persona_in_Chiaro)_Informazioni_Persona_In_Chiaro_DIR_>_Voglio_saperne_di_più:
+  - text : "Posso fornirti informazioni sui costi e darti maggiori spiegazioni sui servizi forniti. Scegli tu cosa chiedermi!"
+  utter__AS_(Persona_in_Chiaro)_Informazioni_Persona_In_Chiaro_IND_(assicurazionipersona):
+  - text : "L'assicurazione Persona In Chiaro protegge in caso di infortuni nella vita professionale e privata. Puoi proteggere chi vuoi, la tua famiglia o i tuoi collaboratori. La polizza, inoltre, è personalizzabile e vale in tutto il mondo. La copertura comprende anche la garanzia Assistenza."
+  utter__AS_(Persona_in_Chiaro)_Informazioni_Persona_In_Chiaro_IND_(assicurazionipersona)>_Maggiori_info:
+  - text : "Posso fornirti informazioni sui costi e darti maggiori spiegazioni sui servizi forniti. Scegli tu cosa chiedermi!"
+  utter__AS_(Persona_in_Chiaro)_Informazioni_Persona_In_Chiaro_IND_(personainchiaro):
+  - text : "L'assicurazione Persona In Chiaro protegge in caso di infortuni nella vita professionale e privata. Puoi proteggere chi vuoi, la tua famiglia o i tuoi collaboratori. La polizza, inoltre, è personalizzabile e vale in tutto il mondo. La copertura comprende anche la garanzia Assistenza."
+  utter__AS_(Protezione_Vita)_Beneficiari_DIR:
+  - text : "Puoi cambiare i beneficiari, ad eccezione di pochi casi specifici. Vuoi chiedermi qualcos'altro?"
+  utter__AS_(Protezione_Vita)_Beneficiari_IND_(protezionevita):
+  - text : "Puoi cambiare i beneficiari, ad eccezione di pochi casi specifici. Vuoi chiedermi qualcos'altro?"
+  utter__AS_(Protezione_Vita)_Chiusura_DIR:
+  - text : "Puoi terminare il contratto ogni anno e terminare il versamento del premio. Posso fare altro per te?"
+  utter__AS_(Protezione_Vita)_Chiusura_IND_(protezionevita):
+  - text : "Puoi terminare il contratto ogni anno e terminare il versamento del premio. Posso fare altro per te?"
+  utter__AS_(Protezione_Vita)_Costi_DIR:
+  - text : "Il premio viene determinato sulla base delle abitudini di vita del richiedente e sul suo stato di salute. Può essere pagato o con rate annuali o in una unica soluzione. Posso fare altro?"
+  utter__AS_(Protezione_Vita)_Costi_IND_(protezionevita):
+  - text : "Il premio viene determinato sulla base delle abitudini di vita del richiedente e sul suo stato di salute. Può essere pagato con rate annuali o in una unica soluzione. Posso fare altro?"
+  utter__AS_(Protezione_Vita)_Durata_DIR:
+  - text : "Il contratto ha una durata minima di 1 anno e massima di 30 anni per premio annuo, mentre è minima di 2 anni e massima di 30 per premio unico."
+  utter__AS_(Protezione_Vita)_Durata_IND_(protezionevita):
+  - text : "Il contratto ha una durata minima di 1 anno e massima di 30 anni per premio annuo, mentre è minima di 2 anni e massima di 30 per premio unico."
+  utter__AS_(Protezione_Vita)_Età_massima_DIR:
+  - text : "L'età massima di ingresso è di 65 anni, con un'età massima a scadenza di 70 anni. Cos'altro vorresti sapere?"
+  utter__AS_(Protezione_Vita)_Età_massima_IND_(protezionevita):
+  - text : "L'età massima di ingresso è di 65 anni, con un'età massima a scadenza di 70 anni. Cos'altro vorresti sapere?"
+  utter__AS_(Protezione_Vita)_Fumo_DIR:
+  - text : "Se sei fumatore dovrai comunicarlo all'impresa di assicurazione. Se inizi o ricominci a fumare, ma hai già aperto il contratto, dovrai comunicare la modifica entro 30 giorni. Posso fare altro per te?"
+  utter__AS_(Protezione_Vita)_Fumo_IND_(protezionevita):
+  - text : "Se sei fumatore dovrai comunicarlo all'impresa di assicurazione. Se inizi o ricominci a fumare, ma hai già aperto il contratto, dovrai comunicare la modifica entro 30 giorni. Posso fare altro per te?"
+  utter__AS_(Protezione_Vita)_Informazioni_Protezione_Vita_DIR:
+  - text : "L'assicurazione Protezione Vita permette un sostegno economico alle persone che ami, garantendo un capitale a seguito di un evento imprevedibile come la prematura scomparsa. Se vuoi, puoi chiedermi altre informazioni, per esempio su costi e durata."
+  utter__AS_(Protezione_Vita)_Informazioni_Protezione_Vita_DIR_>_Voglio_saperne_di_più:
+  - text : "Posso fornirti informazioni sui costi, sulla durata del contratto o rispondere ai tuoi dubbi sull'età massima di accesso e sulla possibilità di fumare. Scegli tu cosa chiedermi!"
+  utter__AS_(Protezione_Vita)_Informazioni_Protezione_Vita_IND_(assicurazionipersona):
+  - text : "Posso fornirti informazioni sui costi, sulla durata del contratto o rispondere ai tuoi dubbi sull'età massima di accesso e sulla possibilità di fumare. Scegli tu cosa chiedermi!"
+  utter__AS_(Protezione_Vita)_Informazioni_Protezione_Vita_IND_(assicurazionipersona)_>_Maggiori_info:
+  - text : "Posso fornirti informazioni sui costi, sulla durata del contratto o rispondere ai tuoi dubbi sull'età massima di accesso e sulla possibilità di fumare. Scegli tu cosa chiedermi!"
+  utter__AS_(Protezione_Vita)_Informazioni_Protezione_Vita_IND_(protezionevita):
+  - text : "L'assicurazione Protezione Vita permette un sostegno economico alle persone che ami, garantendo un capitale a seguito di un evento imprevedibile come la prematura scomparsa. Se vuoi, puoi chiedermi altre informazioni, per esempio su costi e durata."
+  utter__AS_(Valore_Auto)_Copertura_Cristalli_IND_(valoreauto):
+  - text: La protezione cristalli può essere attivata qualunque sia l'età del veicolo. Si tratta di un servizio aggiuntivo, che dovrà quindi essere richiesto direttamente. Posso esserti ancora di aiuto?"
+  utter__AS_(Valore_Auto)_Garanzie_DIR:
+  - text : "Valore Auto comprende, oltre alla copertura di Responsabilità Civile, una serie di estensioni aggiuntive che potrai attivare. Tra queste abbiamo le coperture in caso di incendio, furto, collisione, infortuni del conducente ed anche assistenza e tutela legale."
+  utter__AS_(Valore_Auto)_Garanzie_IND_(valoreauto):
+  - text : "Valore Auto comprende, oltre alla copertura di Responsabilità Civile, una serie di estensioni aggiuntive che potrai attivare. Tra queste abbiamo le coperture in caso di incendio, furto, collisione, infortuni del conducente ed anche assistenza e tutela legale."
+  utter__AS_(Valore_Auto)_Guida_Esperta_IND:
+  - text : "Con la tariffa Guida Esperta puoi ottenere un importante risparmio sul premio. Puoi attivarla se il veicolo non viene usato da qualcuno con meno di 26 anni. Posso fare altro per te?"
+  utter__AS_(Valore_Auto)_Incidente_in_torto_DIR:
+  - text : "Con Valore Auto sei coperto dagli infortuni anche se hai torto nell'incidente. Ti basta sottoscrivere la garanzia infortuni e attivare una delle sue diverse formule. Posso fare altro per te?"
+  utter__AS_(Valore_Auto)_Incidente_in_torto_IND_(valoreauto):
+  - text : "Con Valore Auto sei coperto dagli infortuni anche se hai torto nell'incidente. Ti basta sottoscrivere la garanzia infortuni e attivare una delle sue diverse formule. Posso fare altro per te?"
+  utter__AS_(Valore_Auto)_Informazioni_su_Valore_Auto_DIR:
+  - text : " L'assicurazione Valore Auto offre un'ampia gamma di garanzie per accrescere la tua sicurezza. Protegge conducente, passeggeri e veicolo dai rischi durante la circolazione stradale. Avrai anche a disposizione un numero di assistenza da chiamare in caso di sinistro. Posso fare altro?"
+  utter__AS_(Valore_Auto)_Informazioni_su_Valore_Auto_DIR_>_Voglio_saperne_di_più:
+  - text : "Posso fornirti informazioni sull'attivazione della copertura di Responsabilità Civile o, ad esempio, descriverti i principali eventi coperti dall'assicurazione. Scegli tu cosa chiedermi!"
+  utter__AS_(Valore_Auto)_Informazioni_su_Valore_Auto_IND_(assicurazioniveicolo):
+  - text : "L'assicurazione Valore Auto offre un'ampia gamma di garanzie per accrescere la tua sicurezza. Protegge conducente, passeggeri e veicolo dai rischi durante la circolazione stradale. Avrai anche a disposizione un numero di assistenza da chiamare in caso di sinistro. Posso fare altro?"
+  utter__AS_(Valore_Auto)_Informazioni_su_Valore_Auto_IND_(assicurazioniveicolo)_>_Voglio_saperne_di_più:
+  - text : " Posso fornirti informazioni sull'attivazione della copertura di Responsabilità Civile o, ad esempio, descriverti i principali eventi coperti dall'assicurazione. Scegli tu cosa chiedermi!"
+  utter__AS_(Valore_Auto)_Informazioni_su_Valore_Auto_IND_(valoreauto):
+  - text : "L'assicurazione Valore Auto offre un'ampia gamma di garanzie per accrescere la tua sicurezza. Protegge conducente, passeggeri e veicolo dai rischi durante la circolazione stradale. Avrai anche a disposizione un numero di assistenza da chiamare in caso di sinistro. Posso fare altro?"
+  utter__AS_(Valore_Auto)_Quali_veicoli_posso_assicurare_DIR:
+  - text : "Con la polizza Valore Auto puoi assicurare tutti i veicoli a motore, compresi motocicli e ciclomotori. Posso fare altro per te?"
+  utter__AS_(Valore_Auto)_Quali_veicoli_posso_assicurare_IND_(valoreauto):
+  - text : "Con la polizza Valore Auto puoi assicurare tutti i veicoli a motore, compresi motocicli e ciclomotori. Posso fare altro per te?"
+  utter__AS_(Valore_Auto)_Responsabilità_Civile_DIR:
+  - text : "Puoi attivare la sola copertura di Responsabilità Civile con il Contratto Base RC Auto. È valido per autovetture, ciclomotori e motocicli e non prevede tariffe personalizzate. Posso fare altro per te?"
+  utter__AS_(Valore_Auto)_Responsabilità_Civile_IND_(valoreauto):
+  - text : "Puoi attivare la sola copertura di Responsabilità Civile con il Contratto Base RC Auto. È valido per autovetture, ciclomotori e motocicli e non prevede tariffe personalizzate. Posso fare altro per te?"
+  utter__AS_Assicurazioni_sul_Veicolo_DIR:
+  - text : "L'assicurazione per auto, motocicli e ciclomotori offerta da Banca Sella è Valore Auto. Oltre alla copertura obbligatoria di Responsabilità Civile, Valore Auto ti permette di attivare tutte le garanzie di cui necessiti."
+  utter__AS_Assicurazioni_sul_Veicolo_IND_(tipidiassicurazioni):
+  - text : "L'assicurazione per auto, motocicli e ciclomotori offerta da Banca Sella è Valore Auto. Oltre alla copertura obbligatoria di Responsabilità Civile, Valore Auto ti permette di attivare tutte le garanzie di cui necessiti."
+  utter__AS_Assicurazioni_sulla_Casa_DIR:
+  - text : "L'assicurazione sulla casa offerta da Banca Sella è Casa e Famiglia. Questa assicurazione ti protegge in caso di danni causati involontariamente e ti permette di proteggere la tua abitazione e la tua famiglia."
+  utter__AS_Assicurazioni_sulla_Casa_IND_(tipidiassicurazioni):
+  - text : "L'assicurazione sulla casa offerta da Banca Sella è Casa e Famiglia. Questa assicurazione ti protegge in caso di danni causati involontariamente e ti permette di proteggere la tua abitazione e la tua famiglia."
+  utter__AS_Assicurazioni_sulla_Persona_DIR:
+  - text : "Le assicurazioni sulla persona offerte da Banca Sella sono 2. Persona In Chiaro è una assicurazione contro gli infortuni destinata a te, ai tuoi familiari o ai tuoi collaboratori. Protezione Vita è una assicurazione sulla vita."
+  utter__AS_Assicurazioni_sulla_Persona_IND_(tipidiassicurazioni):
+  - text : "Le assicurazioni sulla persona offerte da Banca Sella sono 2. Persona In Chiaro è una assicurazione contro gli infortuni destinata a te, ai tuoi familiari o ai tuoi collaboratori. Protezione Vita è una assicurazione sulla vita."
+  utter__AS_Informazioni_Garanzia_Assistenza_DIR:
+  - text : "La garanzia Assistenza prevede una serie di servizi tra cui Consulenza medica telefonica o a domicilio, anticipo spese mediche e autista a disposizione. La garanzia è prestata in forma Base ma può essere arricchita con ulteriori servizi attraverso la forma top."
+  utter__AS_Tipi_Assicurazioni_DIR:
+  - text : "Banca Sella offre assicurazioni sulla persona, sulla casa e sul veicolo, a seconda delle esigenze proposte dal cliente. Puoi chiedermi maggiori dettagli su ciascuna di queste categorie."
+  utter__CA_(Carte)_Elenco_delle_carte_DIR:
+  - text : "Le carte disponibili in Banca Sella sono le seguenti Carta di debito MasterCard, Carta di Credito Visa, Carta di Credito MasterCard Platinum, Carta Prepagata Mastercard. Posso fornirti informazioni specifiche per ognuna di queste, ti basta chiedere!"
+  utter__CA_(Carte)_Quali_sono_le_carte_di_credito?_DIR:
+  - text : "Con Banca Sella puoi scegliere di aprire Visa Classic o MasterCard Platinum. Su quale delle due vorresti avere delle informazioni?"
+  utter__CA_(Carte)_Quali_sono_le_carte_di_credito?_DIR_>_Mastercard_Platinum:
+  - text : "Mastercard Platinum offre tutti i servizi di una normale carta di credito, con l'aggiunta però di coperture assicurative e vantaggi dedicati. C'è altro che vuoi sapere?"
+  utter__CA_(Carte)_Quali_sono_le_carte_di_credito?_DIR_>_Non_lo_so:
+  - text : "Posso parlarti della Mastercard Platinum. Offre tutti i servizi di una normale carta di credito, con l'aggiunta però di coperture assicurative e vantaggi dedicati. C'è qualcosa che vorresti sapere?"
+  utter__CA_(Carte)_Quali_sono_le_carte_di_credito?_DIR_>_Visa_Classic:
+  - text : "Visa Classic è la carta ideale per gestire le spese con flessibilità. Puoi scegliere la modalità di rimborso più adatta alle tue esigenze, scegliendo tra un rimborso a saldo oppure rateale. C'è altro che vuoi sapere?"
+  utter__CA_(Carte)_Quali_sono_le_carte_di_debito?_DIR:
+  - text : "Con Banca Sella puoi scegliere di aprire Mastercard Debit. Se hai bisogno di saperne di più, puoi farmi qualche domanda."
+  utter__CA_(Carte)_Quali_sono_le_carte_di_debito?_DIR_>_Mastercard_Debit:
+  - text : " Mastercard Debit è la carta ideale per gestire e monitorare le operazioni quotidiane in autonomia e sicurezza. Le spese sono addebitate direttamente sul tuo conto e puoi tenerle sotto controllo dall'app Sella. Posso fare altro per te?"
+  utter__CA_(Carte)_Quali_sono_le_carte_prepagate?_DIR:
+  - text : " Con Banca Sella puoi scegliere di aprire Mastercard Prepaid. Se hai bisogno di saperne di più, puoi farmi qualche domanda."
+  utter__CA_(Carte)_Quali_sono_le_carte_prepagate?_DIR_>_Mastercard_Prepaid:
+  - text : " Mastercard Prepaid è una prepagata flessibile e sicura. Puoi richiederla sia in formato virtuale che fisico. Con App Sella puoi monitorare le spese e scegliere tu quanto ricaricare, per spendere solo quanto pianificato. Posso essere ancora utile?"
+  utter__CA_(Chip&Pin)_Cosè_il_Chip_and_Pin?_DIR:
+  - text : " Chip and Pin è una tecnologia che garantisce più sicurezza nei pagamenti. Sfrutta un metodo di pagamento che riduce il rischio di frodi. Per perfezionare gli acquisti viene richiesto di digitare il pin al posto di firmare la ricevuta. Fanno eccezione i pagamenti contactless sotto i 25 euro. Posso fare altro per te?"
+  utter__CA_(Differenza_Carte)_Cosè_una_carta_di_credito?_DIR:
+  - text : " La carta di credito è uno strumento di pagamento che ti conferisce un certo credito da utilizzare per le tue operazioni. Ogni mese avrai un limite di spesa concessa e il pagamento verrà addebitato sul tuo conto il mese seguente. Puoi chiedermi un elenco delle carte di credito disponibili."
+  utter__CA_(Differenza_Carte)_Cosè_una_carta_di_debito?_DIR:
+  - text : "La carta di debito o bancomat è uno strumento di pagamento che prevede un addebito delle spese sul conto corrente, contestualmente all'esecuzione dell'operazione. Puoi chiedermi un elenco delle carte di debito disponibili."
+  utter__CA_(Differenza_Carte)_Cosè_una_carta_prepagata?_DIR:
+  - text : "La prepagata è uno strumento di pagamento che permette esclusivamente l'utilizzo del denaro precedentemente accreditato. Gli accrediti possono essere effettuati in contanti o, se previsto, tramite bonifico o ricarica da conto corrente. Puoi chiedermi un elenco delle prepagate disponibili."
+  utter__CA_(Differenza_Carte)_Differenza_CreditoDebito_DIR:
+  - text : "Entrambe le carte sono associate ad un conto corrente. La carta di credito ha un limite di spesa massimo mensile e l'addebito delle operazioni viene effettuato il mese successivo. La carta di debito, invece, prevede l'addebito contestualmente alle operazioni. A quale delle due saresti maggiormente interessato?"
+  utter__CA_(Differenza_Carte)_Differenza_CreditoPrepagata_DIR:
+  - text : "La prepagata utilizza solo il denaro precedentemente accreditato sulla stessa, invece la carta di debito addebita le spese al conto corrente a cui viene associata. Gli addebiti avvengono il mese successivo rispetto le operazioni eseguite. A quale delle due saresti maggiormente interessato?"
+  utter__CA_(Differenza_Carte)_Differenza_PrepagataDebito_DIR:
+  - text : "La prepagata utilizza solo il denaro precedentemente accreditato sulla stessa, invece la carta di debito attinge in modo diretto dal conto corrente a cui viene associata. A quale delle due saresti maggiormente interessato?"
+  utter__CA_(Generiche)_Addebito_Pagamento_con_Carta_di_Credito_DIR:
+  - text : "Gli addebiti sono diretti sul conto corrente e possono essere fatti in modalità a saldo o rateale. In genere avvengono il 10 o 15 del mese. Vuoi sapere qualcos'altro?"
+  utter__CA_(Generiche)_Autenticazione_Forte_DIR:
+  - text : "L'autenticazione forte è un sistema di sicurezza aggiuntivo che permette di ridurre i rischi di transazioni fraudolente. Si basa sul riconoscimento attraverso due o più fattori indipendenti, per esempio attraverso l'utilizzo di qualcosa che conosce solo il cliente, per esempio la password, di qualcosa che possiede solo lui, per esempio lo smartphone, e di qualcosa che lo caratterizza, per esempio i dati biometrici. Posso fare altro?"
+  utter__CA_(Generiche)_Autorizzazione_Pendente_DIR:
+  - text : "Le autorizzazioni pendenti sono richieste autorizzative pervenute sulla tua carta, che sono state approvate ma sono in sospeso. Questo accade quando l'esercente non ha ancora provveduto a richiedere l'addebito effettivo. Hai altre domande da farmi?"
+  utter__CA_(Generiche)_Autorizzazione_pagamento_su_Internet_DIR:
+  - text : "Con Banca Sella puoi autorizzare i pagamenti online con carta in 2 modi. Il primo utilizza una notifica push sul tuo smartphone e il riconoscimento biometrico. Il seocondo utilizza un codice otp ricevuto via sms e le tue credenziali dell'app sella o internet Banking. Cosa posso fare altro?"
+  utter__CA_(Generiche)_Carta_Smagnetizzata_DIR:
+  - text : "Se la carta che utilizzi viene letta con difficoltà dai pos, allora è probabile si sia smagnetizzata e quindi necessita di essere sostituita. Puoi richiedere un duplicato o la sostituzione contattando l'assistenza carte. Posso fare altro per te?"
+  utter__CA_(Generiche)_Contestazione_Operazione_DIR:
+  - text : "Puoi contestare un'operazione attraverso l'apposito modulo di contestazione, indicando tutte le informazioni riguardo la disputa. Puoi farlo entro 60 giorni dall'addebito. La contestazione ha dei costi variabili in base al numero di operazioni e alla loro localizzazione. Se vuoi, puoi chiedermi quali sono i costi."
+  utter__CA_(Generiche)_Contestazione_Operazione_DIR_custom:
+  - text : " Se l'operazione contestata è di competenza del titolare, verranno addebitate le spese di ricerca pari a 15 euro e 49 per ciascuna transazione in Italia oppure 20 euro e 65 per transazione in altro Paese. Per alcune tipologie di contestazione l'importo minimo è 25 dollari. Posso fare altro per te?"
+  utter__CA_(Generiche)_Cosè_il_Codice_cvv?_DIR:
+  - text : "Il cvv è un codice di sicurezza composto da 3 cifre e riportato sul retro della carta di sotto la banda magnetica. C'è altro che posso fare per te?"
+  utter__CA_(Generiche)_Domiciliazioni_DIR:
+  - text : "Puoi disdire un servizio con addebiti periodici sulla carta comunicando il recesso del contratto alla società che fornisce il servizio. Posso fare altro per te?"
+  utter__CA_(Generiche)_Furto_e_Smarrimento_DIR:
+  - text : " Se hai smarrito la tua carta puoi disattivarla e porgere denuncia alle autorità. Ti forniremo noi gli estremi necessari per farlo. Hai bisogno ancora di me?"
+  utter__CA_(Generiche)_Furto_e_Smarrimento_DIR_>_Trovata:
+  - text : " Se ritrovi la carta che avevi smarrito, puoi chiederne lo sblocco. Per farlo è sufficiente presentarsi con la carta ritrovata e con un documento d'identità. Posso fare altro?"
+  utter__CA_(Generiche)_Ho_dimenticato_il_PIN_DIR:
+  - text : "Se hai i codici di accesso ai servizi online, puoi visualizzare in sicurezza il pin della carta direttamente dal sito o su app Sella. Posso fare altro per te?"
+  utter__CA_(Generiche)_Il_cvv_non_è_leggibile_DIR:
+  - text : "Se hai i codici di accesso ai servizi online, puoi visualizzare in sicurezza il cvv della carta direttamente dal sito o su app Sella. In alternativa, potresti richiedere aiuto contattando l'assistenza carte. Posso fare altro per te?"
+  utter__CA_(Generiche)_Messaggio_Pagamento_Sconosciuto_DIR:
+  - text : "Puoi richiedere un controllo delle operazioni al fine di comprendere il carattere delle stesse. In caso di frode potrai bloccare la carta e sporgere denuncia alle autorità. Posso fare altro per te?"
+  utter__CA_(Generiche)_Modifica_Carta_di_appoggio_di_un_Conto_DIR:
+  - text : "Hai la facoltà di cambiare il conto corrente di appoggio della tua carta attraverso una apposita procedura di comunicazione. Ci sono altre domande che vorresti farmi?"
+  utter__CA_(Generiche)_PIN_sbagliato_DIR:
+  - text : "Se sbagli ad inserire il pin o la password per 3 volte, allora i codici di accesso ai servizi online saranno bloccati per motivi di sicurezza. Potrai sbloccarli contattando la nostra assistenza. Posso fare altro per te?"
+  utter__CA_(Generiche)_Rinnovo_Carta_DIR:
+  - text : "Nel mese di scadenza della carta verrà prodotto il suo rinnovo, che verrà recapitato con raccomandata qualche giorno prima della fine del mese. Il rinnovo avrà lo stesso numero di carta e pin. Potrà essere usato dal primo giorno del mese seguente alla scadenza. Posso fare altro per te?"
+  utter__CA_(Generiche)_Ritrovamento_della_Carta_DIR:
+  - text : "Se ritrovi la carta che avevi smarrito, puoi chiederne lo sblocco. Per farlo è sufficiente presentarsi con la carta ritrovata e con un documento d'identità. Posso fare altro?"
+  utter__CA_(Generiche)_Sospensione_della_carta_DIR:
+  - text : "Puoi sospendere o attivare la tua carta in qualsiasi momento. Ti basta andare nella sezione Operatività Carta e poi Gestione Sospensione Operatività. Puoi scegliere anche di disattivare specifiche funzioni, come pagamenti online e prelievi da ATM. C'è altro che posso fare per te?"
+  utter__CA_(Generiche)_Tempo_contabilizzazione_Carta_di_Debito_DIR:
+  - text : "Le tempistiche della contabilizzazione con carta di debito possono variare dipendentemente dalla transazione. In genere le operazioni vengono addebitate nei giorni lavorativi successivi alla transazione. Posso esserti ancora utile?"
+  utter__CA_(Mastercard_Debit)_Come_si_richiede?_DIR:
+  - text : "Mastercard Debit è attivabile al momento dell'apertura di un conto WebSella. Se sei già cliente puoi richiederla online. Posso fare altro per te?"
+  utter__CA_(Mastercard_Debit)_Come_si_richiede?_IND_(mastercarddebit):
+  - text : "Mastercard Debit è attivabile al momento dell'apertura di un conto WebSella. Se sei già cliente puoi richiederla online. Posso fare altro per te?"
+  utter__CA_(Mastercard_Debit)_Contactless_DIR:
+  - text : "Mastercard Debit è dotata di tecnologia contactless, quindi puoi pagare semplicemente avvicinando la tua carta al pos. In questo caso il pin non è richiesto per le transazioni inferiori a 25 euro. Posso essere ancora utile?"
+  utter__CA_(Mastercard_Debit)_Contactless_IND_(mastercarddebit):
+  - text : "Mastercard Debit è dotata di tecnologia contactless, quindi puoi pagare semplicemente avvicinando la tua carta al pos. In questo caso il pin non è richiesto per le transazioni inferiori a 25 euro. Posso essere ancora utile?"
+  utter__CA_(Mastercard_Debit)_Cosa_devo_fare_quando_ricevo_la_carta?_IND_(mastercarddebit):
+  - text : "Quando ricevi una nuova carta, è consigliato abilitare gli acquisti online e la funzionalità contactless. Ti ricordiamo, inoltre, di custodire il pin e di non conservarlo assieme alla carta. C'è altro che posso fare per te?"
+  utter__CA_(Mastercard_Debit)_Costo_DIR:
+  - text : "Il rilascio della carta di debito Mastercard ha un canone di attivazione di 18 euro. Dall'anno successivo il canone è sempre pari a 18 euro. Posso fare altro?"
+  utter__CA_(Mastercard_Debit)_Costo_IND_(mastercarddebit):
+  - text : "Il rilascio della carta di debito Mastercard ha un canone di attivazione di 18 euro. Dall'anno successivo il canone è sempre pari a 18 euro. Posso fare altro per te?"
+  utter__CA_(Mastercard_Debit)_Informazioni_generali_DIR:
+  - text : "Mastercard Debit è la carta ideale per gestire e monitorare le operazioni quotidiane in autonomia e sicurezza. Le spese sono addebitate direttamente sul tuo conto e puoi tenerle sotto controllo dall'app Sella. Posso fare altro per te?"
+  utter__CA_(Mastercard_Debit)_Informazioni_generali_IND_(mastercarddebit):
+  - text : "Mastercard Debit è la carta ideale per gestire e monitorare le operazioni quotidiane in autonomia e sicurezza. Le spese sono addebitate direttamente sul tuo conto e puoi tenerle sotto controllo dall'app Sella. Posso fare altro per te"
+  utter__CA_(Mastercard_Debit)_Notifica_IND_(mastercarddebit):
+  - text : "Puoi attivare la funzione di notifica push per autorizzare i pagamenti online, anche con riconoscimento dell'impronta digitale o del viso. In alternativa, puoi ricevere un messaggio al costo di 12 centesimi ciascuno. Posso esserti ancora utile?"
+  utter__CA_(Mastercard_Debit)_Notifica_IND_(mastercarddebit)_>_Non_funziona:
+  - text : "Se non ricevi la notifica ti verrà richiesto di inserire il codice otp ricevuto via sms e il pin o la password utilizzati insieme al tuo codice cliente o allo username. C'è altro che posso fare per te?"
+  utter__CA_(Mastercard_Debit)_Pagamento_da_smartphone_IND_(mastercarddebit):
+  - text : "Puoi pagare con lo smartphone sia online che nei negozi, dopo aver aggiunto la tua carta a Google Pay o Apple Pay. C'è altro che posso fare per te?"
+  utter__CA_(Mastercard_Debit)_Quanto_ci_vuole_a_riceverla?_IND_(mastercarddebit):
+  - text : "I tempi di ricezione delle carte variano tra i 10 e i 20 giorni lavorativi. Vuoi farmi qualche altra domanda?"
+  utter__CA_(Mastercard_Debit)_Rinnovo_IND_(mastercarddebit):
+  - text : "Nel mese di scadenza della carta verrà prodotto il suo rinnovo, che verrà recapitato con raccomandata qualche giorno prima della fine del mese. Il rinnovo avrà lo stesso numero di carta e pin. Potrà essere usato dal primo giorno del mese seguente alla scadenza. Posso fare altro per te?"
+  utter__CA_(Mastercard_Debit)_Scadenza_IND:
+  - text : "La data di scadenza è scritta sul fronte della carta, sotto il pan di 16 cifre. La carta ha validità per tutto il mese indicato. Come posso esserti ancora utile?"
+  utter__CA_(Mastercard_Debit)_Tempo_Contabilizzazione_IND_(mastercarddebit):
+  - text : "Le tempistiche della contabilizzazione con carta di debito possono variare dipendentemente dalla transazione. In genere le operazioni vengono addebitate nei giorni lavorativi successivi alla transazione. Posso esserti ancora utile?"
+  utter__CA_(Mastercard_Platinum)_Addebito_Pagamento_IND_(mastercardplatinum):
+  - text : "Gli addebiti sono diretti sul conto corrente e possono essere fatti in modalità a saldo o rateale. In genere avvengono il 10 o 15 del mese. Vuoi sapere qualcos'altro?"
+  utter__CA_(Mastercard_Platinum)_Attivazione_Assicurazione_IND_(mastercardplatinum):
+  - text : "I servizi assicurativi sono già tutti inclusi nel canone della carta. C'è altro che vorresti sapere?"
+  utter__CA_(Mastercard_Platinum)_Attivazione_assicurazione_DIR:
+  - text : "I servizi assicurativi sono già tutti inclusi nel canone della carta. C'è altro che vorresti sapere?"
+  utter__CA_(Mastercard_Platinum)_Copertura_Assicurativa_IND_(mastercardplatinum):
+  - text : "Mastercard Platinum offre diversi servizi assicurativi, per esempio assistenza medica e di viaggio. Posso esserti ancora utile?"
+  utter__CA_(Mastercard_Platinum)_Cosa_devo_fare_quando_ricevo_la_carta?_IND_(mastercardplatinum):
+  - text : "Quando ricevi una nuova carta, è consigliato abilitare gli acquisti online e la funzionalità contactless. Ti ricordiamo, inoltre, di custodire il pin e di non conservarlo assieme alla carta. C'è altro che posso fare per te?"
+  utter__CA_(Mastercard_Platinum)_Costi_DIR:
+  - text : "Il rilascio di Mastercard Platinum ha un canone di attivazione di 150 euro. Dall'anno successivo il canone dipende dall'importo speso nell'anno precedente. Fino a 7.000 euro costa 150 euro annui, da 7.000 a 9.000 costa 75 euro annui, oltre 9.000 il costo è nullo. Posso fare altro per te?"
+  utter__CA_(Mastercard_Platinum)_Costi_IND_(mastercardplatinum):
+  - text : "Il rilascio di Mastercard Platinum ha un canone di attivazione di 150 euro. Dall'anno successivo il canone dipende dall'importo speso nell'anno precedente. Fino a 7.000 euro costa 150 euro annui, da 7.000 a 9.000 costa 75 euro annui, oltre 9.000 il costo è nullo. Posso fare altro?"
+  utter__CA_(Mastercard_Platinum)_Informazioni_generali_DIR:
+  - text : "Mastercard Platinum offre tutti i servizi di una normale carta di credito, con l'aggiunta però di coperture assicurative e vantaggi dedicati. Vuoi chiedermi qualcosa nello specifico?"
+  utter__CA_(Mastercard_Platinum)_Informazioni_generali_IND_(mastercardplatinum):
+  - text : "Mastercard Platinum offre tutti i servizi di una normale carta di credito, con l'aggiunta però di coperture assicurative e vantaggi dedicati. Vuoi chiedermi qualcosa nello specifico?"
+  utter__CA_(Mastercard_Platinum)_Notifica_IND_(mastercardplatinum):
+  - text : "Puoi attivare la funzione di notifica push per autorizzare i pagamenti online, anche con riconoscimento dell'impronta digitale o del viso. In alternativa, puoi ricevere un messaggio al costo di 12 centesimi ciascuno. Posso esserti ancora utile?"
+  utter__CA_(Mastercard_Platinum)_Notifica_IND_(mastercardplatinum)_>_Non_funziona:
+  - text : "Se non ricevi la notifica ti verrà richiesto di inserire il codice otp ricevuto via sms e il pin o la password utilizzati insieme al tuo codice cliente o allo username. C'è altro che posso fare per te?"
+  utter__CA_(Mastercard_Platinum)_Pagamento_da_smartphone_IND_(mastercardplatinum):
+  - text : "Puoi pagare con lo smartphone sia online che nei negozi, dopo aver aggiunto la tua carta a Google Pay o Apple Pay. C'è altro che posso fare per te?"
+  utter__CA_(Mastercard_Platinum)_Perché_sceglierla?_DIR:
+  - text : "La carta Mastercard Platinum, oltre ai normali servizi di una carta di credito, prevede la possibilità di attivare anche servizi assicurativi e molti vantaggi esclusivi. Se vuoi, puoi farmi qualche domanda a riguardo"
+  utter__CA_(Mastercard_Platinum)_Perché_sceglierla?_IND:
+  - text : "La carta Mastercard Platinum, oltre ai normali servizi di una carta di credito, prevede la possibilità di attivare anche servizi assicurativi e molti vantaggi esclusivi. Se vuoi, puoi farmi qualche domanda a riguardo."
+  utter__CA_(Mastercard_Platinum)_Quanto_ci_vuole_a_riceverla?_IND_(mastercardplatinum):
+  - text : "I tempi di ricezione delle carte variano tra i 10 e i 20 giorni lavorativi. Vuoi farmi qualche altra domanda?"
+  utter__CA_(Mastercard_Platinum)_Rimborso_DIR:
+  - text : "Mastercard Platinum prevede un rimborso a saldo, cioè è necessario rimborsare tutte le spese in un'unica soluzione. Come posso esserti ancora utile?"
+  utter__CA_(Mastercard_Platinum)_Rimborso_IND_(mastercardplatinum):
+  - text : "Mastercard Platinum prevede un rimborso a saldo, cioè è necessario rimborsare tutte le spese in un'unica soluzione. Come posso esserti ancora utile?"
+  utter__CA_(Mastercard_Platinum)_Rinnovo_IND_(mastercardplatinum):
+  - text : "Nel mese di scadenza della carta verrà prodotto il suo rinnovo, che verrà recapitato con raccomandata qualche giorno prima della fine del mese. Il rinnovo avrà lo stesso numero di carta e pin. Potrà essere usato dal primo giorno del mese seguente alla scadenza. Posso fare altro per te?"
+  utter__CA_(Mastercard_Platinum)_Scadenza_IND_(mastercardplatinum):
+  - text : "La data di scadenza è scritta sul fronte della carta, sotto il pan di 16 cifre. La carta ha validità per tutto il mese indicato. Come posso esserti ancora utile?"
+  utter__CA_(Mastercard_Platinum)_Vantaggi_DIR:
+  - text : "Oltre alle coperture assicurative, Mastercard Platinum offre diversi vantaggi dedicati, tra cui offerte con aziende di noleggio e compagnie aeree. Viene fornito anche il servizio Mastercard Service, un'assistenza 24 ore su 24 per emergenze in viaggio. Posso fare altro?"
+  utter__CA_(Mastercard_Platinum)_Vantaggi_IND_(mastercardplatinum):
+  - text : "Oltre alle coperture assicurative, Mastercard Platinum offre diversi vantaggi dedicati, tra cui offerte con aziende di noleggio e compagnie aeree. Viene fornito anche il servizio Mastercard Service, un'assistenza 24 ore su 24 per emergenze in viaggio. Posso fare altro?"
+  utter__CA_(Mastercard_Prepaid)_Bonifici_IND_(mastercardprepaid):
+  - text : " Grazie all'IBAN presente sulla carta, puoi sia effettuare che ricevere bonifici, per esempio per l'accredito dello stipendio. C'è altro che vorresti sapere?"
+  utter__CA_(Mastercard_Prepaid)_Carta_Virtuale_IND_(mastercardprepaid):
+  - text : "Grazie all'IBAN presente sulla carta, puoi sia effettuare che ricevere bonifici, per esempio per l'accredito dello stipendio. C'è altro che vorresti sapere?"
+  utter__CA_(Mastercard_Prepaid)_Cosa_devo_fare_quando_ricevo_la_carta?_IND_(mastercardprepaid):
+  - text : "La carta virtuale la trovi direttamente in app sella e puoi iniziare ad usarla subito sia online che in negozio tramite Google Pay o Apple Pay. Con la carta fisica puoi fare acquisti online e in negozio, ma hai bisogno di digitare il PIN quando richiesto. Posso esserti ancora utile?"
+  utter__CA_(Mastercard_Prepaid)_Costo_DIR:
+  - text : "Il rilascio della carta prepagata Mastercard in formato fisico ha il costo di 5 euro, mentre in formato virtuale è gratuito. Il canone annuale è di 1 euro al mese. Posso essere ancora utile?"
+  utter__CA_(Mastercard_Prepaid)_Costo_IND_(mastercardprepaid):
+  - text : "Il rilascio della carta prepagata Mastercard in formato fisico ha il costo di 5 euro, mentre in formato virtuale è gratuito. Il canone annuale è di 1 euro al mese. Posso essere ancora utile?"
+  utter__CA_(Mastercard_Prepaid)_Informazioni_generali_DIR:
+  - text : "Mastercard Prepaid è una prepagata flessibile e sicura. Puoi richiederla sia in formato virtuale che fisico. Con App Sella puoi monitorare le spese e scegliere tu quanto ricaricare, per spendere solo quanto pianificato. Se vuoi, puoi farmi qualche domanda riguardo questa carta."
+  utter__CA_(Mastercard_Prepaid)_Informazioni_generali_IND_(mastercardprepaid):
+  - text : "Mastercard Prepaid è una prepagata flessibile e sicura. Puoi richiederla sia in formato virtuale che fisico. Con App Sella puoi monitorare le spese e scegliere tu quanto ricaricare, per spendere solo quanto pianificato. Se vuoi, puoi farmi qualche domanda riguardo questa carta."
+  utter__CA_(Mastercard_Prepaid)_Notifica_IND_(mastercardprepaid):
+  - text : "Puoi attivare la funzione di notifica push per autorizzare i pagamenti online, anche con riconoscimento dell'impronta digitale o del viso. In alternativa, puoi ricevere un messaggio al costo di 12 centesimi ciascuno. Posso esserti ancora utile?"
+  utter__CA_(Mastercard_Prepaid)_Notifica_IND_(mastercardprepaid)_>_Non_funziona:
+  - text : "Se non ricevi la notifica ti verrà richiesto di inserire il codice otp ricevuto via sms e il pin o la password utilizzati insieme al tuo codice cliente o allo username. C'è altro che posso fare per te?"
+  utter__CA_(Mastercard_Prepaid)_Pagamento_da_smartphone_IND_(mastercardprepaid):
+  - text : "Mastercard Prepaid è una prepagata flessibile e sicura. Puoi richiederla sia in formato virtuale che fisico. Con App Sella puoi monitorare le spese e scegliere tu quanto ricaricare, per spendere solo quanto pianificato. Se vuoi, puoi farmi qualche domanda riguardo questa carta."
+  utter__CA_(Mastercard_Prepaid)_Posso_usarla_subito?_DIR:
+  - text : "Per poter iniziare a utilizzare la tua Mastercard Prepaid in formato fisico, hai bisogno di accedere alla sezione Carte dell'app o dell'Internet Banking e seguire la procedura di attivazione. C'è altro che vorresti chiedermi?"
+  utter__CA_(Mastercard_Prepaid)_Posso_usarla_subito?_IND_(mastercardprepaid):
+  - text : "Per poter iniziare a utilizzare la tua Mastercard Prepaid in formato fisico, hai bisogno di accedere alla sezione Carte dell'app o dell'Internet Banking e seguire la procedura di attivazione. C'è altro che vorresti chiedermi?"
+  utter__CA_(Mastercard_Prepaid)_Quante_carte_posso_richiedere?_DIR:
+  - text : "Ogni titolare può possedere fino ad un massimo di due carte prepagate. Posso esserti ancora utile in altro modo?"
+  utter__CA_(Mastercard_Prepaid)_Quante_carte_posso_richiedere?_IND_(mastercardprepaid):
+  - text : "Ogni titolare può possedere fino ad un massimo di due carte prepagate. Posso esserti ancora utile in altro modo?"
+  utter__CA_(Mastercard_Prepaid)_Quanto_ci_vuole_a_riceverla?_IND_(mastercardprepaid):
+  - text : "I tempi di ricezione delle carte variano tra i 10 e i 20 giorni lavorativi. Vuoi farmi qualche altra domanda?"
+  utter__CA_(Mastercard_Prepaid)_Rinnovo_IND_(mastercardprepaid):
+  - text : "Nel mese di scadenza della carta verrà prodotto il suo rinnovo, che verrà recapitato con raccomandata qualche giorno prima della fine del mese. Il rinnovo avrà lo stesso numero di carta e pin. Potrà essere usato dal primo giorno del mese seguente alla scadenza. Posso fare altro per te?"
+  utter__CA_(Mastercard_Prepaid)_Scadenza_IND_(mastercardprepaid):
+  - text : "La data di scadenza è scritta sul fronte della carta, sotto il pan di 16 cifre. La carta ha validità per tutto il mese indicato. Come posso esserti ancora utile?"
+  utter__CA_(Visa_Classic)_Cosa_devo_fare_quando_ricevo_la_carta?_IND_(visaclassic):
+  - text : "Quando ricevi una nuova carta, è consigliato abilitare gli acquisti online e la funzionalità contactless. Ti ricordiamo, inoltre, di custodire il pin e di non conservarlo assieme alla carta. C'è altro che posso fare per te?"
+  utter__CA_(Visa_Classic)_Costo_DIR:
+  - text : "Il rilascio della carta di debito Visa Classic ha un canone di attivazione di 41 euro. Dall'anno successivo il canone è sempre pari a 41 euro. Posso fare altro per te?"
+  utter__CA_(Visa_Classic)_Costo_IND_(visaclassic):
+  - text : "Il rilascio della carta di debito Visa Classic ha un canone di attivazione di 41 euro. Dall'anno successivo il canone è sempre pari a 41 euro."
+  utter__CA_(Visa_Classic)_Informazioni_generali_DIR:
+  - text : "Visa Classic è la carta ideale per gestire le spese con flessibilità. Puoi scegliere la modalità di rimborso più adatta alle tue esigenze, scegliendo tra un rimborso a saldo oppure rateale. C'è altro che vorresti chiedermi?"
+  utter__CA_(Visa_Classic)_Informazioni_generali_IND_(visaclassic):
+  - text : "Visa Classic è la carta ideale per gestire le spese con flessibilità. Puoi scegliere la modalità di rimborso più adatta alle tue esigenze, scegliendo tra un rimborso a saldo oppure rateale. C'è altro che vorresti chiedermi?"
+  utter__CA_(Visa_Classic)_Notifica_IND_(visaclassic):
+  - text : "Puoi attivare la funzione di notifica push per autorizzare i pagamenti online, anche con riconoscimento dell'impronta digitale o del viso. In alternativa, puoi ricevere un messaggio al costo di 12 centesimi ciascuno. Posso esserti ancora utile?"
+  utter__CA_(Visa_Classic)_Notifica_IND_(visaclassic)_>_Non_funziona:
+  - text : "Se non ricevi la notifica ti verrà richiesto di inserire il codice otp ricevuto via sms e il pin o la password utilizzati insieme al tuo codice cliente o allo username. C'è altro che posso fare per te?"
+  utter__CA_(Visa_Classic)_Pagamento_da_smartphone_IND_(visaclassic):
+  - text : "Puoi pagare con lo smartphone sia online che nei negozi, dopo aver aggiunto la tua carta a Google Pay o Apple Pay. C'è altro che posso fare per te?"
+  utter__CA_(Visa_Classic)_Quanto_ci_vuole_a_riceverla?_IND_(visaclassic):
+  - text : "I tempi di ricezione delle carte variano tra i 10 e i 20 giorni lavorativi. Vuoi farmi qualche altra domanda?"
+  utter__CA_(Visa_Classic)_Rimborso_a_saldo_e_rateale_DIR:
+  - text : "Visa Classic offre due modalità di rimborso spese, ovvero il rimborso a saldo e il rimborso rateale. Con il rimborso a saldo restituisci tutti i soldi spesi in un'unica soluzione, con quello rateale, invece, li restituisci rateizzati secondo le tue esigenze. Posso fare altro?"
+  utter__CA_(Visa_Classic)_Rimborso_a_saldo_e_rateale_IND_(visaclassic):
+  - text : "Visa Classic offre due modalità di rimborso spese, ovvero il rimborso a saldo e il rimborso rateale. Con il rimborso a saldo restituisci tutti i soldi spesi in un'unica soluzione, con quello rateale, invece, li restituisci rateizzati secondo le tue esigenze. Posso fare altro?"
+  utter__CA_(Visa_Classic)_Rinnovo_IND_(visaclassic):
+  - text : "Nel mese di scadenza della carta verrà prodotto il suo rinnovo, che verrà recapitato con raccomandata qualche giorno prima della fine del mese. Il rinnovo avrà lo stesso numero di carta e pin. Potrà essere usato dal primo giorno del mese seguente alla scadenza. Posso fare altro per te?"
+  utter__CA_(Visa_Classic)_Scadenza_IND_(visaclassic):
+  - text : "La data di scadenza è scritta sul fronte della carta, sotto il pan di 16 cifre. La carta ha validità per tutto il mese indicato. Come posso esserti ancora utile?"
+  utter__CC_(Sella_Premium)_Altri_Servizi_Sella_Premium_DIR:
+  - text : "Sella Premium offre anche contenuti esclusi di educazione finanziaria, per rispondere a tutte le tue curiosità."
+  utter__CC_(Sella_Premium)_Altri_Servizi_Sella_Premium_IND_(sellapremium):
+  - text : "Sella Premium offre anche contenuti esclusi di educazione finanziaria, per rispondere a tutte le tue curiosità."
+  utter__CC_(Sella_Premium)_Cosè_il_Sella_Premium_IND_(sellapremium):
+  - text : "Il conto Sella Premium offre tutte le funzionalità della versione Start, ma con una serie di contenuti e vantaggi aggiuntivi. Se vuoi puoi chiedermi il suo costo o maggiori informazioni sui suoi servizi."
+  utter__CC_(Sella_Premium)_Cosè_il_Sella_Premium_IND_(tipidiconto):
+  - text : "Il conto Sella Premium offre tutte le funzionalità della versione Start, ma con una serie di contenuti e vantaggi aggiuntivi. Se vuoi puoi chiedermi il suo costo o maggiori informazioni sui suoi servizi."
+  utter__CC_(Sella_Premium)_Cosè_il_Sella_Premium?_DIR:
+  - text : "Il conto Sella Premium offre tutte le funzionalità della versione Start, ma con una serie di contenuti e vantaggi aggiuntivi."
+  utter__CC_(Sella_Premium)_Costo_Sella_Premium_DIR:
+  - text : "Il conto Sella Premium ha un costo di 5 euro al mese. I primi 3 mesi hanno un costo inferiore pari a 1 euro e 50. Che cosa altro vorresti sapere?"
+  utter__CC_(Sella_Premium)_Costo_Sella_Premium_IND_(sellapremium):
+  - text : "Il conto Sella Premium ha un costo di 5 euro al mese. I primi 3 mesi hanno un costo inferiore pari a 1 euro e 50. Che cosa altro vorresti sapere?"
+  utter__CC_(Sella_Premium)_Servizi_Sella_Premium_DIR:
+  - text : "Il conto Sella Premium offre tutte le funzionalità della versione Start, ma con una serie di contenuti e vantaggi aggiuntivi."
+  utter__CC_(Sella_Premium)_Servizi_Sella_Premium_IND_(sellapremium):
+  - text : "Tra i servizi di base condivisi con Start ci sono i prelievi da ATM Sella a costo 0, la possibilità di prelevare 4 volte al mese in modo gratuito presso ATM di altre banche in area Euro, bonifici illimitati gratuiti e il rilascio di una carta di debito a canone gratuito dal secondo anno. Posso fare altro per te?"
+  utter__CC_(Sella_Premium)_Servizi_Sella_Premium_IND_(tipidiconto):
+  - text : "Oltre ai servizi inclusi già nel conto Start, Sella Premium offre una serie di vantaggi aggiuntivi. Tra questi la possibilità di emettere 2 bonifici istantanei ogni mese a costo gratuito, l'aumento da 4 a 6 per i prelievi gratuiti al mese da altre banche e il rilascio di una carta di credito e una di debito. Viene inclusa anche una protezione dai rischi informatici."
+  utter__CC_(Sella_Premium)_Servizi_in_comune_(sellapremium):
+  - text : "Tra i servizi di base condivisi con Start ci sono i prelievi da ATM Sella a costo 0, la possibilità di prelevare 4 volte al mese in modo gratuito presso ATM di altre banche in area Euro, bonifici illimitati gratuiti e il rilascio di una carta di debito a canone gratuito dal secondo anno. Posso fare altro per te?"
+  utter__CC_(Sella_Start)_Altri_Servizi_Sella_Start_IND_(sellastart):
+  - text : "Tra gli altri servizi, Sella Start offre la possibilità di utilizzo di un salvadanaio digitale, l'aggregazione di conti e la possibilità di bonifico da altri conti."
+  utter__CC_(Sella_Start)_Cosè_il_Sella_Start?_DIR:
+  - text : "Il conto Sella Start ha tutte le funzionalità di un classico conto corrente, con la possibilità di operare in autonomia dove e quando si vuole. Il conto ha un IBAN italiano e garantisce alcuni comodi servizi."
+  utter__CC_(Sella_Start)_Cosè_il_Sella_Start?_IND_(sellastart):
+  - text : "Il conto Sella Start ha tutte le funzionalità di un classico conto corrente, con la possibilità di operare in autonomia dove e quando si vuole. Il conto ha un IBAN italiano e garantisce alcuni comodi servizi. Cos'altro vorresti sapere?"
+  utter__CC_(Sella_Start)_Cosè_il_Sella_Start?_IND_(tipidiconto):
+  - text : "Il conto Sella Start ha tutte le funzionalità di un classico conto corrente, con la possibilità di operare in autonomia dove e quando si vuole. Il conto ha un IBAN italiano e garantisce alcuni comodi servizi. Cos'altro vorresti sapere?"
+  utter__CC_(Sella_Start)_Costo_Sella_Start_DIR:
+  - text : "Con Sella Start hai una serie di vantaggi inclusi, tra cui i prelievi da ATM Sella a costo 0, la possibilità di prelevare 4 volte al mese in modo gratuito presso ATM di altre banche in area Euro, bonifici illimitati gratuiti e il rilascio di una carta di debito a canone gratuito dal secondo anno."
+  utter__CC_(Sella_Start)_Costo_Sella_Start_IND_(sellastart):
+  - text : "Con Sella Start hai una serie di vantaggi inclusi, tra cui i prelievi da ATM Sella a costo 0, la possibilità di prelevare 4 volte al mese in modo gratuito presso ATM di altre banche in area Euro, bonifici illimitati gratuiti e il rilascio di una carta di debito a canone gratuito dal secondo anno."
+  utter__CC_(Sella_Start)_Servizi_Sella_Start_DIR:
+  - text : "Con Sella Start hai una serie di vantaggi inclusi, tra cui i prelievi da ATM Sella a costo 0, la possibilità di prelevare 4 volte al mese in modo gratuito presso ATM di altre banche in area Euro, bonifici illimitati gratuiti e il rilascio di una carta di debito a canone gratuito dal secondo anno."
+  utter__CC_(Sella_Start)_Servizi_Sella_Start_IND_(sellastart):
+  - text : "Con Sella Start hai una serie di vantaggi inclusi, tra cui i prelievi da ATM Sella a costo 0, la possibilità di prelevare 4 volte al mese in modo gratuito presso ATM di altre banche in area Euro, bonifici illimitati gratuiti e il rilascio di una carta di debito a canone gratuito dal secondo anno."
+  utter__CC_(Sella_Start)_Servizi_Sella_Start_IND_(tipidiconto):
+  - text : "Con Sella Start hai una serie di vantaggi inclusi, tra cui i prelievi da ATM Sella a costo 0, la possibilità di prelevare 4 volte al mese in modo gratuito presso ATM di altre banche in area Euro, bonifici illimitati gratuiti e il rilascio di una carta di debito a canone gratuito dal secondo anno."
+  utter__CC_Accesso_al_conto_DIR:
+  - text : "Puoi utilizzare il tuo conto tramite app Sella o Internet Banking, dal sito sella.it. Per email riceverai le istruzioni utili per attivare il codice Cliente."
+  utter__CC_Carte_incluse_DIR:
+  - text : "Sia con Sella Start che con Sella Premium, le carte di debito o di credito possono essere attivate dal cliente nel momento dell' apertura del conto. Solo in questo caso si può beneficiare degli sconti sulle relative attivazioni"
+  utter__CC_Carte_incluse_IND_(contigenerico):
+  - text : "Sia con Sella Start che con Sella Premium, le carte di debito o di credito possono essere attivate dal cliente nel momento dell' apertura del conto. Solo in questo caso si può beneficiare degli sconti sulle relative attivazioni."
+  utter__CC_Chi_può_aprire_un_conto_DIR:
+  - text : "Per procedere all'apertura di un conto è sufficiente e necessario che tu sia maggiorenne e risieda in Italia."
+  utter__CC_Chi_può_aprire_un_conto_IND_(contigenerico):
+  - text : "Per procedere all'apertura di un conto è sufficiente e necessario che tu sia maggiorenne e risieda in Italia."
+  utter__CC_Come_firmare_i_doc_(Sella_Digit)_DIR:
+  - text : "I documenti e i contratti per l'apertura del conto possono essere inviati online senza dover spedire il cartaceo. Puoi firmarli usando Sella Digit, la firma digitale di Banca Sella, che ti verrà rilasciata in abbinamento al tuo numero di telefono."
+  utter__CC_Come_firmare_i_doc_(Sella_Digit)_IND_(contigenerico):
+  - text : "I documenti e i contratti per l'apertura del conto possono essere inviati online senza dover spedire il cartaceo. Puoi firmarli usando Sella Digit, la firma digitale di Banca Sella, che ti verrà rilasciata in abbinamento al tuo numero di telefono."
+  utter__CC_Come_si_chiamava_laltro_conto?_IND_(sellapremium):
+  - text : "L'altro conto corrente si chiama Sella Start. Se vuoi puoi chiedermi maggiori informazioni sui suoi servizi e sui suoi costi."
+  utter__CC_Come_si_chiamava_laltro_conto?_IND_(sellastart):
+  - text : "L'altro conto corrente si chiama Sella Premium. Se vuoi puoi chiedermi maggiori informazioni sui suoi servizi e sui suoi costi."
+  utter__CC_Credenziali_DIR:
+  - text : "Le credenziali di accesso al conto corrente vengono inviate per mail entro pochi giorni dalla sua apertura."
+  utter__CC_Credenziali_IND_(contigenerico):
+  - text : "Le credenziali di accesso al conto corrente vengono inviate per mail entro pochi giorni dalla sua apertura."
+  utter__CC_Documenti_necessari_DIR:
+  - text : "Se sei già nostro cliente non avrai bisogno di nulla. In caso contrario, ti serviranno codice fiscale, documento d'identità, numero di telefono, indirizzo di posta elettronica e un secondo documento identificativo, nel caso in cui non si abbia a disposizione una webcam."
+  utter__CC_Documenti_necessari_IND_(contigenerico):
+  - text : "vedi dal fullfilment"
+  utter__CC_Ho_già_Digit_FOLLOWUP:
+  - text : "Se sei già un nostro cliente e hai Sella Digit, per firmare i documenti del nuovo conto corrente puoi utilizzare la stessa firma digitale che possiedi già."
+  utter__CC_Ho_già_Digit_FOLLOWUP_IND:
+  - text : "Se sei già un nostro cliente e hai Sella Digit, per firmare i documenti del nuovo conto corrente puoi utilizzare la stessa firma digitale che possiedi già."
+  utter__CC_Meno_di_18_anni_&_Residenza_DIR:
+  - text : "Per aprire un conto in Banca Sella è obbligatorio essere maggiorenni e risiedere in Italia."
+  utter__CC_Meno_di_18_anni_&_Residenza_IND_(contigenerico):
+  - text : "Per aprire un conto in Banca Sella è obbligatorio essere maggiorenni e risiedere in Italia."
+  utter__CC_Numero_cointestatari_DIR:
+  - text : "Il conto Start e quello Premium possono essere intestati fino ad un massimo di 3 persone."
+  utter__CC_Numero_cointestatari_IND_(contigenerico):
+  - text : "Il conto Start e quello Premium possono essere intestati fino ad un massimo di 3 persone."
+  utter__CC_Quale_Carta_è_inclusa_DIR:
+  - text : "Con Sella Start puoi richiedere una carta di debito Mastercard. Con Sella Premium potrai richiedere anche una carta di credito."
+  utter__CC_Quali_sono_i_tipi_di_conto?_DIR:
+  - text : "Con Sella Start puoi richiedere una carta di debito Mastercard. Con Sella Premium potrai richiedere anche una carta di credito."
+  utter__CC_Quali_sono_i_tipi_di_conto?_DIR_repeat:
+  - text : "I conti offerti da Banca Sella sono il Sella Start e il Sella Premium. Se vuoi, puoi chiedermi ulteriori informazioni su ciascuno di essi."
+  utter__CC_Quali_sono_i_tipi_di_conto?_DIR_>_Non_lo_so:
+  - text : "Posso proporti il Conto Sella Premium. Offre tutte le funzionalità della versione Start ma possiede anche contenuti e vantaggi aggiuntivi. Se sei interessato, puoi chiedermi di più sui servizi o sui costi."
+  utter__CC_Sono_già_cliente_DIR:
+  - text : "Se sei già un nostro cliente puoi aprire un nuovo conto e non dovrai inviare nuovamente i dati che già possediamo. Ti basterà effettuare l'apposita richiesta."
+  utter__CC_Sono_già_cliente_IND_(contigenerico):
+  - text : "Se sei già un nostro cliente puoi aprire un nuovo conto e non dovrai inviare nuovamente i dati che già possediamo. Ti basterà effettuare l'apposita richiesta."
+  utter__GEN_(Dati_Account)_Modifica_Informazioni_Personali_DIR:
+  - text : "Puoi visionare e modificare i tuoi dati attraverso il servizio di Internet Banking. Durante l'accesso riceverai un OTP per sms da utilizzare per questioni di sicurezza. Puoi modificare numero di telefono, indirizzo mail, residenza e domicilio. Posso essere ancora utile?"
+  utter__PR_(ATFS)_Dipendenti_Pubblici_DIR:
+  - text : "I dipendenti pubblici che hanno maturato il diritto al pagamento del Trattamento di Fine Servizio possono effettuare la richiesta di anticipo del trattamento. Posso fare altro per te?"
+  utter__PR_(ATFS)_Dipendenti_Pubblici_IND_(anticipotrattamentofineservizio):
+  - text : "I dipendenti pubblici che hanno maturato il diritto al pagamento del Trattamento di Fine Servizio possono effettuare la richiesta di anticipo del trattamento. Posso fare altro per te?"
+  utter__PR_(ATFS)_Importi_eccedenti_DIR:
+  - text : "In ambito di Anticipo di Trattamento di Fine Servizio, Banca Sella offre il prodotto Ordinario per gli eventuali importi eccedenti i 45.000 euro. Posso fare altro per te?"
+  utter__PR_(ATFS)_Importi_eccedenti_IND_(anticipotrattamentofineservizio):
+  - text : "Banca Sella offre il prodotto Ordinario per gli eventuali importi eccedenti i 45.000 euro. Posso fare altro per te?"
+  utter__PR_(ATFS)_Informazioni_sullAnticipo_Trattamento_IND_(anticipotrattamentofineservizio):
+  - text : "Banca Sella offre un finanziamento fino a 45.000 euro per l'anticipo del trattamento di fine servizio o di fine rapporto e permette di arricchire l'offerta per chi desidera una quota maggiore. Cos'altro ti piacerebbe sapere?"
+  utter__PR_(ATFS)_Informazioni_sullAnticipo_Trattamento_di_Fine_Servizio_DIR:
+  - text : "Banca Sella offre un finanziamento fino a 45.000 euro per l'anticipo del trattamento di fine servizio o di fine rapporto e permette di arricchire l'offerta per chi desidera una quota maggiore. Cos'altro ti piacerebbe sapere?"
+  utter__PR_(ATFS)_Istruttoria_IND_(anticipotrattamentofineservizio):
+  - text : "L'anticipo di Trattamento di Fine Servizio non prevede alcuna spesa di istruttoria. Posso fare altro per te?"
+  utter__PR_(ATFS)_Modalità_richiesta_DIR:
+  - text : "Puoi richiedere l'anticipo del trattamento presentando il prospetto di liquidazione da parte dell'ente erogatore, ovviamente solo se il TFS o il TFR non è stato ancora liquidato. Vuoi chiedermi altro?"
+  utter__PR_(ATFS)_Modalità_richiesta_IND_(anticipotrattamentofineservizio):
+  - text : "Puoi richiedere l'anticipo del trattamento presentando il prospetto di liquidazione da parte dell'ente erogatore, ovviamente solo se il TFS o il TFR non è stato ancora liquidato. Vuoi chiedermi altro?"
+  utter__PR_(ATFS)_Rimborso_DIR:
+  - text : "A fronte dell'anticipo, l'Ente erogatore rimborserà alla banca per conto del cliente. Posso esserti ancora utile?"
+  utter__PR_(ATFS)_Rimborso_IND_(anticipotrattamentofineservizio):
+  - text : "A fronte dell'anticipo, l'Ente erogatore rimborserà alla banca per conto del cliente. Posso esserti ancora utile?"
+  utter__PR_(ATFS)_Vincoli_DIR:
+  - text : "L'Anticipo del Trattamento di Fine Servizio non ha vincoli specifici e non prevede l'obbligo di copertura assicurativa. C'è qualcos'altro che vorresti conoscere?"
+  utter__PR_(ATFS)_Vincoli_IND_(anticipotrattamentofineservizio):
+  - text : "L'Anticipo del Trattamento di Fine Servizio non ha vincoli specifici e non prevede l'obbligo di copertura assicurativa. C'è qualcos'altro che vorresti conoscere?"
+  utter__PR_(Cessione_del_Quinto_Pensione)_Chi_può_fare_il_finanziamento_DIR:
+  - text : "Puoi richiedere la cessione del quinto della pensione se sei in pensione, residente in Italia, se sei in possesso di una pensione qualsiasi, fatta eccezione per quelle di invalidità civile e assegno sociale ed infine se non superi l'età di 84 anni a fine piano di ammortamento. Posso fare altro?"
+  utter__PR_(Cessione_del_Quinto_Pensione)_Chi_può_fare_il_finanziamento_IND_(cessionequintopensione):
+  - text : "Puoi richiedere la cessione del quinto della pensione se sei in pensione, residente in Italia, se sei in possesso di una pensione qualsiasi, fatta eccezione per quelle di invalidità civile e assegno sociale ed infine se non superi l'età di 84 anni a fine piano di ammortamento. Posso fare altro?"
+  utter__PR_(Cessione_del_Quinto_Pensione)_Destinazione_denaro_IND_(cessionequintopensione):
+  - text : "Non è necessario motivare la destinazione d'uso del finanziamento di Cessione del Quinto. Posso esserti ancora utile?"
+  utter__PR_(Cessione_del_Quinto_Pensione)_Durata_DIR:
+  - text : "La Cessione del Quinto della Pensione ha una durata compresa fra 36 e 120 mesi. Posso fare altro per te?"
+  utter__PR_(Cessione_del_Quinto_Pensione)_Durata_IND_(cessionequintopensione):
+  - text : "La Cessione del Quinto della Pensione ha una durata compresa fra 36 e 120 mesi. Posso fare altro per te?"
+  utter__PR_(Cessione_del_Quinto_Pensione)_Informazioni_sul_finanziamento_DIR:
+  - text : "La cessione del quinto della pensione è un prestito destinato ai pensionati che vogliono finanziare i propri progetti o della propria famiglia. Se vuoi, posso darti maggiori informazioni oppure puoi chiedermi tu qualcosa di specifico."
+  utter__PR_(Cessione_del_Quinto_Pensione)_Informazioni_sul_finanziamento_IND_(cessionequintopensione):
+  - text : "La cessione del quinto della pensione è un prestito destinato ai pensionati che vogliono finanziare i propri progetti o della propria famiglia. Se vuoi, posso darti maggiori informazioni oppure puoi chiedermi tu qualcosa di specifico."
+  utter__PR_(Cessione_del_Quinto_Pensione)_Maggiori_info_IND_(cessionequintopensione):
+  - text : "La cessione del quinto della pensione è a tasso fisso con una durata che va dai 36 ai 120 mesi. I costi del finanziamento sono compresi nelle rate, che restano uguali tutti i mesi. Posso fare altro per te?"
+  utter__PR_(Cessione_del_Quinto_Pensione)_Rimborso_DIR:
+  - text : "Il rimborso avviene direttamente con trattenuta della rata sul cedolino della pensione. È quindi l'ente pensionistico che si occupa di pagare la rata, trattenendola dalla pensione. Vuoi chiedermi altro?"
+  utter__PR_(Cessione_del_Quinto_Pensione)_Rimborso_IND_(cessionequintopensione):
+  - text : "Il rimborso avviene direttamente con trattenuta della rata sul cedolino della pensione. È quindi l'ente pensionistico che si occupa di pagare la rata, trattenendola dalla pensione. Vuoi chiedermi altro?"
+  utter__PR_(Cessione_del_Quinto_Pensione)_Tasso_DIR:
+  - text : "La Cessione del Quinto della Pensione è a tasso fisso. C'è altro che vorresti sapere?"
+  utter__PR_(Cessione_del_Quinto_Pensione)_Tasso_IND_(cessionequintopensione):
+  - text : "La Cessione del Quinto della Pensione è a tasso fisso. C'è altro che vorresti sapere?"
+  utter__PR_(Cessione_del_Quinto_Stipendio)_Assicurazione_DIR:
+  - text : "È obbligatorio avere un'assicurazione che tuteli in caso di eventi negativi quali il decesso o la perdita del lavoro. Prima della sottoscrizione della cessione del quinto dello stipendio, bisogna tenere presente di come il costo dell'assicurazione impatti sul costo totale del finanziamento. Posso fare altro per te?"
+  utter__PR_(Cessione_del_Quinto_Stipendio)_Assicurazione_IND_(cessionequintostipendio):
+  - text : "È obbligatorio avere un'assicurazione che tuteli in caso di eventi negativi quali il decesso o la perdita del lavoro. Prima della sottoscrizione del contratto, bisogna tenere presente di come il costo dell'assicurazione impatti sul costo totale del finanziamento. Posso fare altro per te?"
+  utter__PR_(Cessione_del_Quinto_Stipendio)_Convenzioni_Speciali_IND_(cessionequintostipendio):
+  - text : "Per i dipendenti statali è presente la convenzione NOIPA con il Ministero delle Finanze. Posso esserti ancora utile?"
+  utter__PR_(Cessione_del_Quinto_Stipendio)_Destinatari_DIR:
+  - text : "La Cessione del Quinto dello Stipendio è rivolta ai dipendenti pubblici e statali o ai dipendenti di aziende private. Vuoi chiedermi qualcos'altro?"
+  utter__PR_(Cessione_del_Quinto_Stipendio)_Destinatari_IND_(cessionequintostipendio):
+  - text : "La Cessione del Quinto dello Stipendio è rivolta ai dipendenti pubblici e statali o ai dipendenti di aziende private. Vuoi chiedermi qualcos'altro?"
+  utter__PR_(Cessione_del_Quinto_Stipendio)_Destinazione_denaro_IND_(cessionequintostipendio):
+  - text : "Non è necessario motivare la destinazione d'uso del finanziamento di Cessione del Quinto. Posso esserti ancora utile?"
+  utter__PR_(Cessione_del_Quinto_Stipendio)_Informazioni_finanziamento_IND_(cessionequintostipendio):
+  - text : "La cessione del quinto dello stipendio è il finanziamento ideale se hai un reddito da lavoro dipendente e cerchi un finanziamento per i tuoi progetti o quelli della tua famiglia. Se vuoi, posso darti maggiori informazioni oppure puoi chiedermi tu qualcosa di specifico."
+  utter__PR_(Cessione_del_Quinto_Stipendio)_Informazioni_sul_finanziamento_DIR:
+  - text : "La cessione del quinto dello stipendio è il finanziamento ideale se hai un reddito da lavoro dipendente e cerchi un finanziamento per i tuoi progetti o quelli della tua famiglia. Se vuoi, posso darti maggiori informazioni oppure puoi chiedermi tu qualcosa di specifico."
+  utter__PR_(Cessione_del_Quinto_Stipendio)_Maggiori_info_IND_(cessionequintostipendio):
+  - text : "La cessione del quinto dello stipendio ha una rata proporzionale alla tua retribuzione mensile e non supera un quinto del valore della busta paga. Il prestito è a tasso fisso, con una durata massima di 120 mesi. Posso esserti ancora utile?"
+  utter__PR_(Cessione_del_Quinto_Stipendio)_Privati_(cessionequintostipendio):
+  - text : "Possono richiedere il finanziamento i dipendenti che lavorano per sia per una società a responsabilità limitata, sia per una società per azioni. In entrambi i casi i dipendenti devono essere più di 16. Posso fare altro per te?"
+  utter__PR_(Cessione_del_Quinto_Stipendio)_Privati_DIR:
+  - text : "Possono richiedere il finanziamento i dipendenti che lavorano per sia per una società a responsabilità limitata, sia per una società per azioni. In entrambi i casi i dipendenti devono essere più di 16. Posso fare altro per te?"
+  utter__PR_(Cessione_del_Quinto_Stipendio)_Rimborso_DIR:
+  - text : "Il rimborso avviene direttamente con trattenuta della rata dalla busta paga. È quindi il datore di lavoro che si occupa di pagare la rata, trattenendola dallo stipendio. Posso esserti ancora utile?"
+  utter__PR_(Cessione_del_Quinto_Stipendio)_Rimborso_IND_(cessionequintostipendio):
+  - text : "Il rimborso avviene direttamente con trattenuta della rata dalla busta paga. È quindi il datore di lavoro che si occupa di pagare la rata, trattenendola dallo stipendio. Posso esserti ancora utile?"
+  utter__PR_(Cessione_del_Quinto)_Informazioni_generali:
+  - text : "La cessione del quinto della pensione è un prestito destinato ai pensionati che vogliono finanziare i propri progetti o della propria famiglia. Vuoi saperne di più?"
+  utter__PR_(Cessione_del_Quinto)_Informazioni_generali_DIR_>_Pensione:
+  - text : "La cessione del quinto della pensione è a tasso fisso con una durata che va dai 36 ai 120 mesi. I costi del finanziamento sono compresi nelle rate, che restano uguali tutti i mesi. Posso fare altro per te?"
+  utter__PR_(Cessione_del_Quinto)_Informazioni_generali_DIR_>_Pensione_yes:
+  - text : "La cessione del quinto dello stipendio ha una rata proporzionale alla tua retribuzione mensile e non supera un quinto del valore della busta paga. Il prestito è a tasso fisso, con una durata massima di 120 mesi. Posso fare altro per te?"
+  utter__PR_(Cessione_del_Quinto)_Informazioni_generali_DIR_>_Stipendio:
+  - text : "La cessione del quinto dello stipendio è il finanziamento ideale se hai un reddito da lavoro dipendente e cerchi un finanziamento per i tuoi progetti o quelli della tua famiglia. Ne vorresti sapere di più?"
+  utter__PR_(Cessione_del_Quinto)_Informazioni_generali_DIR_>_Stipendio_yes:
+  - text : "La cessione del quinto dello stipendio ha una rata proporzionale alla tua retribuzione mensile e non supera un quinto del valore della busta paga. Il prestito è a tasso fisso, con una durata massima di 120 mesi. Posso fare altro per te?"
+  utter__PR_(Leasing_Autoveicoli)_Cadenza_canoni_DIR:
+  - text : "I canoni del leasing Autoveicoli sono mensili. Come posso esserti ancora utile?"
+  utter__PR_(Leasing_Autoveicoli)_Cadenza_canoni_IND_(leasingautoveicoli):
+  - text : "I canoni del leasing Autoveicoli sono mensili. Come posso esserti ancora utile?"
+  utter__PR_(Leasing_Autoveicoli)_Costi_DIR:
+  - text : "L'importo minimo è di 75.000 euro, la durata del contratto va da 24 a 72 mesi e i canoni sono mensili. Anticipo e riscatto finale sono da concordare e il tasso è fisso o indicizzato. Ti interessa sapere qualcos'altro?"
+  utter__PR_(Leasing_Autoveicoli)_Costi_IND_(leasingautoveicoli):
+  - text : "L'importo minimo è di 75.000 euro, la durata del contratto va da 24 a 72 mesi e i canoni sono mensili. Anticipo e riscatto finale sono da concordare e il tasso è fisso o indicizzato. Posso esserti ancora utile?"
+  utter__PR_(Leasing_Autoveicoli)_Durata_DIR:
+  - text : "Il contratto di Leasing Autoveicoli ha una durata compresa tra 24 e 72 mesi. Posso fare altro per te?"
+  utter__PR_(Leasing_Autoveicoli)_Durata_IND_(leasingautoveicoli):
+  - text : "Il contratto del Leasing Autoveicoli ha una durata compresa tra 24 e 72 mesi. Posso esserti ancora utile?"
+  utter__PR_(Leasing_Autoveicoli)_Importo_DIR:
+  - text : "Il Leasing Autoveicoli necessita di un importo minimo di 75.000 euro. Che altro vorresti sapere?"
+  utter__PR_(Leasing_Autoveicoli)_Importo_IND:
+  - text : "Il finanziamento necessita di un importo minimo di 75.000 euro. C'è altro che vorresti sapere?"
+  utter__PR_(Leasing_Autoveicoli)_Informazioni_generiche_DIR:
+  - text : "Il leasing autoveicoli finanzia l'acquisto di un autoveicolo, nuovo o usato. Scegli tu quale modello comprare, noi ti aiuteremo a valutare prezzo e condizioni di vendita. Se vuoi, puoi chiedermi i vincoli, la durata e gli importi minimi del prestito."
+  utter__PR_(Leasing_Autoveicoli)_Informazioni_generiche_IND_(leasingautoveicoli):
+  - text : "Il leasing autoveicoli finanzia l'acquisto di un autoveicolo, nuovo o usato. Scegli tu quale modello comprare, noi ti aiuteremo a valutare prezzo e condizioni di vendita. Se vuoi, puoi chiedermi i vincoli, la durata e gli importi minimi del prestito."
+  utter__PR_(Leasing_Autoveicoli)_Riscatto_Finale_DIR:
+  - text : "Il riscatto finale previsto nel contratto di Leasing Autoveicoli è al massimo pari al 20%. Posso fare altro per "
+  utter__PR_(Leasing_Autoveicoli)_Riscatto_Finale_IND_(leasingautoveicoli):
+  - text : "Il riscatto finale previsto nel contratto di Leasing Autoveicoli è al massimo pari al 20%. Posso fare altro per te?"
+  utter__PR_(Leasing_Autoveicoli)_Tassi_di_interesse_DIR:
+  - text : "Il tasso del Leasing Autoveicoli è fisso o indicizzato. Puoi sceglierlo nel momento in cui fai il contratto. Posso esserti ancora utile?"
+  utter__PR_(Leasing_Autoveicoli)_Tassi_di_interesse_IND_(leasingautoveicoli):
+  - text : "Il tasso del Leasing Autoveicoli è fisso o indicizzato. Puoi sceglierlo nel momento in cui fai il contratto. Posso esserti ancora utile?"
+  utter__PR_(Leasing_Autoveicoli)_Vincoli_DIR:
+  - text : "Il bene acquistato, gli accessori e gli allestimenti devono essere assicurati con vincolo a favore di Sella Leasing. L'assicurazione deve protrarsi fino a 30 giorni oltre la durata del contratto di locazione. Si devono coprire i rischi di responsabilità civile oltre che i rischi per incendio e furto. Posso fare altro per te?"
+  utter__PR_(Leasing_Autoveicoli)_Vincoli_IND_(leasingautoveicoli):
+  - text : "Il bene acquistato, gli accessori e gli allestimenti devono essere assicurati con vincolo a favore di Sella Leasing. L'assicurazione deve protrarsi fino a 30 giorni oltre la durata del contratto di locazione. Si devono coprire i rischi di responsabilità civile oltre che i rischi per incendio e furto. Posso fare altro per te?"
+  utter__PR_(Leasing_Nautico)_Cadenza_Canoni_DIR:
+  - text : "I canoni del leasing Nautico possono essere mensili, bimestrali e trimestrali. Come posso esserti ancora utile?"
+  utter__PR_(Leasing_Nautico)_Cadenza_Canoni_IND_(leasingnautico):
+  - text : "I canoni del leasing Nautico possono essere mensili, bimestrali e trimestrali. Posso fare altro per te?"
+  utter__PR_(Leasing_Nautico)_Costi_DIR:
+  - text : "L'importo minimo è di 75.000 euro, la durata del contratto va da 48 a 96 mesi e i canoni possono essere mensili, bimestrali e trimestrali. Anticipo e riscatto finale sono da concordare e il tasso è fisso o indicizzato. Posso esserti ancora utile?"
+  utter__PR_(Leasing_Nautico)_Costi_IND_(leasingnautico):
+  - text : "L'importo minimo è di 75.000 euro, la durata del contratto va da 48 a 96 mesi e i canoni possono essere mensili, bimestrali e trimestrali. Anticipo e riscatto finale sono da concordare e il tasso è fisso o indicizzato. Posso esserti ancora utile?"
+  utter__PR_(Leasing_Nautico)_Durata_DIR:
+  - text : "Il contratto di Leasing Nautico ha una durata compresa tra 48 e 96 mesi. Posso fare altro per te?"
+  utter__PR_(Leasing_Nautico)_Durata_IND_(leasingnautico):
+  - text : "Il contratto di Leasing Nautico ha una durata compresa tra 48 e 96 mesi. Posso fare altro per te?"
+  utter__PR_(Leasing_Nautico)_Importo_DIR:
+  - text : "Il Leasing Nautico necessita di un importo minimo di 75.000 euro. Che altro vorresti sapere?"
+  utter__PR_(Leasing_Nautico)_Importo_IND_(leasingnautico):
+  - text : "Il Leasing Nautico necessita di un importo minimo di 75.000 euro. Che altro vorresti sapere?"
+  utter__PR_(Leasing_Nautico)_Informazioni_generiche_DIR:
+  - text : "Il leasing nautico finanzia l'acquisto di imbarcazioni da diporto, a vela o a motore. Puoi scegliere tu se acquisire un'imbarcazione nuova, usata o ancora da costruire. Puoi chiedermi qualcosa a proposito dei costi, della durata e delle opzioni del contratto."
+  utter__PR_(Leasing_Nautico)_Informazioni_generiche_IND_(leasingnautico):
+  - text : "Il leasing nautico finanzia l'acquisto di imbarcazioni da diporto, a vela o a motore. Puoi scegliere tu se acquisire un'imbarcazione nuova, usata o ancora da costruire. Puoi chiedermi qualcosa a proposito dei costi, della durata e delle opzioni del contratto."
+  utter__PR_(Leasing_Nautico)_Leasing_Sicurezza_IND_(leasingnautico):
+  - text : "Il Leasing Nautico prevede la possibilità di attivare l'opzione Sicurezza. Vuoi saperne di più?"
+  utter__PR_(Leasing_Nautico)_Leasing_Sicurezza_IND_(leasingnautico)_yes:
+  - text : "Leasing Sicurezza è una polizza aggiuntiva e connessa al leasing, che rimane in vigore per tutta la durata dello stesso. Fornisce protezione al cliente nel caso venga colpito da un evento dannoso e abbia difficoltà a ripagare il leasing. Se vuoi, chiedimi di più su durata, copertura e importi."
+  utter__PR_(Leasing_Nautico)_Tassi_di_interesse_DIR:
+  - text : "Il tasso del Leasing Nautico è fisso o indicizzato. Puoi sceglierlo nel momento in cui fai il contratto. Posso esserti ancora utile?"
+  utter__PR_(Leasing_Nautico)_Tassi_di_interesse_IND_(leasingnautico):
+  - text : "Il tasso del Leasing Nautico è fisso o indicizzato. Puoi sceglierlo nel momento in cui fai il contratto. Posso esserti ancora utile?"
+  utter__PR_(Leasing_Nautico)_Vincoli_DIR:
+  - text : "Il bene acquistato, gli accessori e gli allestimenti devono essere assicurati con vincolo a favore di Sella Leasing. L'assicurazione deve protrarsi fino a 30 giorni oltre la durata del contratto di locazione. Si devono coprire i rischi di responsabilità civile oltre che i rischi per incendio, furto, collisioni, danni da evento atmosferico avverso, sommosse e sabotaggio. Posso fare altro per te?"
+  utter__PR_(Leasing_Nautico)_Vincoli_IND_(leasingnautico):
+  - text : "Il bene acquistato, gli accessori e gli allestimenti devono essere assicurati con vincolo a favore di Sella Leasing. L'assicurazione deve protrarsi fino a 30 giorni oltre la durata del contratto di locazione. Si devono coprire i rischi di responsabilità civile oltre che i rischi per incendio, furto, collisioni, danni da evento atmosferico avverso, sommosse e sabotaggio. Posso fare altro per te?"
+  utter__PR_(Leasing_Sicurezza)_Copertura_DIR:
+  - text : "Il leasing sicurezza copre il decesso e invalidità permanente totale di grado superiore al 66%. L'inabilità temporanea totale copre i canoni nel periodo di inabilità, per un massimo di 2000 euro al mese e 12 mensilità totali. Posso fare altro per te?"
+  utter__PR_(Leasing_Sicurezza)_Copertura_IND_(leasingsicurezza):
+  - text : "Il leasing sicurezza copre il decesso e invalidità permanente totale di grado superiore al 66%. L'inabilità temporanea totale copre i canoni nel periodo di inabilità, per un massimo di 2000 euro al mese e 12 mensilità totali. Posso fare altro per te?"
+  utter__PR_(Leasing_Sicurezza)_Durata_DIR:
+  - text : "Il contratto di leasing sicurezza va da 24 a 120 mesi. Posso fare altro per te?"
+  utter__PR_(Leasing_Sicurezza)_Durata_IND_(leasingsicurezza):
+  - text : "Il contratto di leasing sicurezza va da 24 a 120 mesi. Posso fare altro per te?"
+  utter__PR_(Leasing_Sicurezza)_Importo_DIR:
+  - text : "Il capitale massimo assicurabile con il leasing sicurezza corrispondente all'importo finanziato al netto dell'anticipo è di 200.000 euro. Posso essere ancora utile?"
+  utter__PR_(Leasing_Sicurezza)_Importo_IND_(leasingsicurezza):
+  - text : "Il capitale massimo assicurabile con il leasing sicurezza corrispondente all'importo finanziato al netto dell'anticipo è di 200.000 euro. Posso essere ancora utile?"
+  utter__PR_(Leasing_Sicurezza)_Informazioni_generiche_DIR:
+  - text : "Leasing Sicurezza è una polizza aggiuntiva e connessa al leasing, che rimane in vigore per tutta la durata dello stesso. Fornisce protezione al cliente nel caso venga colpito da un evento dannoso e abbia difficoltà a ripagare il leasing. Se vuoi, chiedimi di più su durata, copertura e importi."
+  utter__PR_(Leasing_Sicurezza)_Informazioni_generiche_IND_(leasingsicurezza):
+  - text : "Leasing Sicurezza è una polizza aggiuntiva e connessa al leasing, che rimane in vigore per tutta la durata dello stesso. Fornisce protezione al cliente nel caso venga colpito da un evento dannoso e abbia difficoltà a ripagare il leasing. Se vuoi, chiedimi di più su durata, copertura e importi."
+  utter__PR_(Leasing)_Informazioni_sui_Leasing_DIR:
+  - text : "Il leasing autoveicoli o nautico è un finanziamento per privati che desiderano una nuova autovettura o un'imbarcazione, senza però dover immobilizzare la somma necessaria per acquistarli. Ti interessa l'acquisto di un veicolo o di una barca?"
+  utter__PR_(Leasing)_Informazioni_sui_Leasing_DIR_>_Nautico:
+  - text : "Il leasing nautico finanzia l'acquisto di imbarcazioni da diporto, a vela o a motore. Puoi scegliere tu se acquisire un'imbarcazione nuova, usata o ancora da costruire. Puoi chiedermi qualcosa a proposito dei costi, della durata e delle opzioni del contratto."
+  utter__PR_(Leasing)_Informazioni_sui_Leasing_DIR_>_Veicolo:
+  - text : "Il leasing autoveicoli finanzia l'acquisto di un autoveicolo, nuovo o usato. Scegli tu quale modello comprare, noi ti aiuteremo a valutare prezzo e condizioni di vendita. Se vuoi, puoi chiedermi i vincoli, la durata e gli importi minimi del prestito."
+  utter__PR_(Mutuo_Green)_Informazioni_Mutuo_Green_DIR:
+  - text : "Il mutuo green è il finanziamento ideale per chi sceglie di investire in una casa ad alta efficienza energetica e risparmiare non solo nelle bollette, ma anche sugli interessi del primo anno. Vuoi saperne di più?"
+  utter__PR_(Mutuo_Green)_Informazioni_Mutuo_Green_DIR_>_Più_dettagli:
+  - text : "Il mutuo green si riferisce a mutui fondiari di durata massima 25 anni e importo massimo di 300.000 euro, a tasso fisso o variabile. È a zero interessi per i primi 12 mesi. Puoi anche attivare la polizza Mutuo Semplice Dedicato. Posso fare altro per te?"
+  utter__PR_(Mutuo_Green)_Informazioni_Mutuo_Green_DIR_>_Più_dettagli_custom:
+  - text : "La polizza Mutuo Semplice Dedicato è una polizza dedicata all'acquisto di immobili residenziali di classe energetica B, A o superiore. Posso essere ancora utile?"
+  utter__PR_(Mutuo)_Che_cosè_il_mutuo_DIR:
+  - text : "Il mutuo è un finanziamento destinato all'acquisto o ristrutturazione della casa. Se vuoi, puoi chiedermi qualche dettaglio aggiuntivo. Posso anche parlarti del Mutuo Green."
+  utter__PR_(Mutuo)_Che_cosè_il_mutuo_DIR_>_Opzioni:
+  - text : "Sono possibili diverse opzioni specifiche per il mutuo. Quelle disponibili sono a tasso variabile, a tasso fisso e il Fondo Garanzia Prima Casa. Se vuoi, puoi chiedermi informazioni per ognuna di queste."
+  utter__PR_(Mutuo)_Che_cosè_il_mutuo_IND_(mutuo):
+  - text : "Il mutuo è un finanziamento destinato all'acquisto o ristrutturazione della casa. Se vuoi, puoi chiedermi qualche dettaglio aggiuntivo."
+  utter__PR_(Mutuo)_Fondo_di_Garanzia_Prima_Casa_DIR:
+  - text : "Il Fondo di Garanzia Prima Casa rilascia garanzia, a prima richiesta, nella misura massima del 50% della quota capitale su mutui ipotecari fino a 250.000 euro. Per i giovani under 36, ma non solo, con ISEE inferiore a 40.000 euro, l'anno di garanzia si estende fino all'80% se si ottiene un mutuo superiore all'80% rispetto al prezzo dell'immobile. Posso fare altro per te?"
+  utter__PR_(Mutuo)_Fondo_di_Garanzia_Prima_Casa_IND_(mutuotassi):
+  - text : " Il Fondo di Garanzia Prima Casa rilascia garanzia, a prima richiesta, nella misura massima del 50% della quota capitale su mutui ipotecari fino a 250.000 euro. Per i giovani under 36, ma non solo, con ISEE inferiore a 40.000 euro, l'anno di garanzia si estende fino all'80% se si ottiene un mutuo superiore all'80% rispetto al prezzo dell'immobile. Posso fare altro per te?"
+  utter__PR_(Mutuo)_Tasso_fisso_DIR:
+  - text : "Il mutuo a tasso fisso stabilisce, al momento della firma del contratto, l'importo delle rate. È perfetto per chi dispone di entrate mensili fisse e vuole avere la certezza che gli importi delle rate non cambino. Posso fare altro per te?"
+  utter__PR_(Mutuo)_Tasso_fisso_IND_(mutuotassi):
+  - text : "Il mutuo a tasso fisso stabilisce, al momento della firma del contratto, l'importo delle rate. È perfetto per chi dispone di entrate mensili fisse e vuole avere la certezza che gli importi delle rate non cambino. Posso fare altro per te?"
+  utter__PR_(Mutuo)_Tasso_variabile_DIR:
+  - text : "Il mutuo a tasso variabile è perfetto per chi desidera un mutuo con tasso in linea con l'andamento dei mercati. Permette di beneficiare delle possibili riduzioni dei tassi di interesse, prendendosi carico però della possibilità che questi possano aumentare. Posso fare altro per te?"
+  utter__PR_(Mutuo)_Tasso_variabile_IND_(mutuotassi):
+  - text : "Il mutuo a tasso variabile è perfetto per chi desidera un mutuo con tasso in linea con l'andamento dei mercati. Permette di beneficiare delle possibili riduzioni dei tassi di interesse, prendendosi carico però della possibilità che questi possano aumentare. Posso fare altro per te?"
+  utter__PR_(Noleggio)_Auto_Temporanea_DIR:
+  - text : "Se stai sottoscrivendo un noleggio a lungo termine e hai permutato il tuo usato, puoi scegliere se richiedere un veicolo temporaneo, in attesa che ti venga fornito il nuovo. Posso fare altro per te?"
+  utter__PR_(Noleggio)_Auto_Temporanea_IND_(noleggiolungotermine):
+  - text : "Se stai sottoscrivendo un noleggio a lungo termine e hai permutato il tuo usato, puoi scegliere se richiedere un veicolo temporaneo, in attesa che ti venga fornito il nuovo. Posso fare altro per te?"
+  utter__PR_(Noleggio)_Costo_DIR:
+  - text : "Con il noleggio a lungo termine hai un canone fisso e unico mensile, calcolato sulla sua durata e sui servizi scelti. Cosa posso fare ancora per te?"
+  utter__PR_(Noleggio)_Costo_IND_(noleggiolungotermine):
+  - text : "Con il noleggio a lungo termine hai un canone fisso e unico mensile, calcolato sulla sua durata e sui servizi scelti. Cosa posso fare ancora per te?"
+  utter__PR_(Noleggio)_Durata_DIR:
+  - text : "La durata del contratto di noleggio a lungo termine varia da 24 a 72 mesi. Vuoi sapere altro?"
+  utter__PR_(Noleggio)_Durata_IND_(noleggiolungotermine):
+  - text : "La durata del contratto di noleggio a lungo termine varia da 24 a 72 mesi. Vuoi sapere altro?"
+  utter__PR_(Noleggio)_Informazioni_generiche_DIR:
+  - text : "Il noleggio a lungo termine ti permettere di avere a disposizione l'auto o la moto che desideri, lasciando a noi le incombenze legate alla sua gestione ed evitando di dover immobilizzare il capitale. Chiedimi pure qualcosa a proposito dei servizi o della durata del contratto."
+  utter__PR_(Noleggio)_Informazioni_generiche_IND_(noleggiolungotermine):
+  - text : "Il noleggio a lungo termine ti permettere di avere a disposizione l'auto o la moto che desideri, lasciando a noi le incombenze legate alla sua gestione ed evitando di dover immobilizzare il capitale. Chiedimi pure qualcosa a proposito dei servizi o della durata del contratto."
+  utter__PR_(Noleggio)_Permuta_DIR:
+  - text : "In caso di noleggio a lungo termine, puoi permutare un tuo veicolo usato e decidere se convertire l'ammontare ricevuto in un anticipo per il nuovo veicolo, oppure riceverlo tramite bonifico. La valutazione viene effettuata al valore di QuattroRuote."
+  utter__PR_(Noleggio)_Permuta_IND_(noleggiolungotermine):
+  - text : "Puoi permutare un tuo veicolo usato e decidere se convertire l'ammontare ricevuto in un anticipo per il nuovo veicolo, oppure riceverlo tramite bonifico. La valutazione viene effettuata al valore di QuattroRuote."
+  utter__PR_(Noleggio)_Servizi_DIR:
+  - text : "I servizi esclusivi a tua disposizione sono molteplici, tra cui l'assicurazione RCA, la consegna del veicolo, l'esonero da responsabilità per danni al veicolo e assistenza stradale. Posso fare altro per te?"
+  utter__PR_(Noleggio)_Servizi_IND_(noleggiolungotermine):
+  - text : "I servizi esclusivi a tua disposizione sono molteplici, tra cui l'assicurazione RCA, la consegna del veicolo, l'esonero da responsabilità per danni al veicolo e assistenza stradale. Posso fare altro per te?"
+  utter__PR_(Noleggio)_Valutazione_usato_IND_(noleggiolungotermine):
+  - text : "L'usato viene acquistato al valore di QuattroRuote, quindi non incorri in nessun rischio di svalutazione. Posso esserti ancora utile?"
+  utter__PR_(Prestito_Green)_Condizioni_DIR:
+  - text : "Col prestito Green puoi richiedere fino a 75.000 euro da restituire in massimo 120 mesi e con un periodo di preammortamento massimo di 12 mesi. Posso essere ancora utile?"
+  utter__PR_(Prestito_Green)_Condizioni_IND_(prestitogreen):
+  - text : "Col prestito Green puoi richiedere fino a 75.000 euro da restituire in massimo 120 mesi e con un periodo di preammortamento massimo di 12 mesi. Posso essere ancora utile?"
+  utter__PR_(Prestito_Green)_Finalità_Auto_IND_(finalitaprestitogreen):
+  - text : "Con Prestito Green puoi acquistare sia auto elettriche che auto ibride. Posso fare altro per te?"
+  utter__PR_(Prestito_Green)_Finalità_Climatizzazione_IND_(finalitaprestitogreen):
+  - text : "Con Prestito Green puoi acquistare oppure sostituire gli impianti di climatizzazione di casa. Posso fare altro per te"
+  utter__PR_(Prestito_Green)_Finalità_Elettrodomestici_IND_(finalitaprestitogreen):
+  - text : "Con Prestito Green puoi acquistare qualsiasi elettrodomestico, purché di classe A+ o superiore. Posso fare altro per te?"
+  utter__PR_(Prestito_Green)_Finalità_Impianto_Fotovoltaico_IND_(finalitaprestitogreen):
+  - text : "Con Prestito Green puoi installare degli impianti fotovoltaici anche se non abbinati a isolamento termico. Posso fare altro per te?"
+  utter__PR_(Prestito_Green)_Finalità_Isolamento_IND_(finalitaprestitogreen):
+  - text : "Con Prestito Green puoi finanziare opere di isolamento termico dell'involucro della tua abitazione. Posso fare altro per te?"
+  utter__PR_(Prestito_Green)_Finalità_Ricarica_veicoli_IND_(finalitaprestitogreen):
+  - text : "Con Prestito Green puoi installare infrastrutture per la ricarica di veicoli elettrici. Posso fare altro per te?"
+  utter__PR_(Prestito_Green)_Finalità_Serramenti_IND_(finalitaprestitogreen):
+  - text : "Con Prestito Green puoi sostituire i serramenti anche se non abbinati a isolamento termico. Posso fare altro per te?"
+  utter__PR_(Prestito_Green)_Informazioni_sul_Prestito_Green_DIR:
+  - text : "Prestito Green è il prestito adatto ad affrontare tutti gli interventi di efficienza e risparmio energetico, per ridurre i consumi e contribuire alla tutela dell'ambiente. Posso esserti ancora utile?"
+  utter__PR_(Prestito_Green)_Informazioni_sul_Prestito_Green_IND_(prestitogreen):
+  - text : "Prestito Green è il prestito adatto ad affrontare tutti gli interventi di efficienza e risparmio energetico, per ridurre i consumi e contribuire alla tutela dell'ambiente. Posso esserti ancora utile?"
+  utter__PR_(Prestito_Green)_Informazioni_sul_Prestito_Green_IND_(tipidiprestito):
+  - text : "Prestito Green è il prestito adatto ad affrontare tutti gli interventi di efficienza e risparmio energetico, per ridurre i consumi e contribuire alla tutela dell'ambiente. Posso esserti ancora utile?"
+  utter__PR_(Prestito_Green)_Per_cosa_posso_usarlo?_DIR:
+  - text : "Puoi scegliere tu la finalità del prestito green dalla sostituzione dei serramenti all'installazione di pannelli fotovoltaici, fino all'acquisto di macchine elettriche o ibride. Se la finalità è differente, puoi provare a chiedermene l'idoneità."
+  utter__PR_(Prestito_Green)_Per_cosa_posso_usarlo?_IND_(prestitogreen):
+  - text : "Puoi scegliere tu la finalità del prestito green dalla sostituzione dei serramenti all'installazione di pannelli fotovoltaici, fino all'acquisto di macchine elettriche o ibride. Se la finalità è differente, puoi provare a chiedermene l'idoneità."
+  utter__PR_(Prestito_Green)_Periodo_Preammortamento_DIR:
+  - text : "Col Prestito Green, il tempo di preammortamento è incluso nei 120 mesi massimi utili a restituire il prestito. Hai altre domande da pormi?"
+  utter__PR_(Prestito_Green)_Periodo_Preammortamento_IND_(prestitogreen):
+  - text : "Con il Prestito Green il tempo di preammortamento è incluso nei 120 mesi massimi utili a restituire il prestito. Hai altre domande da pormi?"
+  utter__PR_(Prestito_ProntoTuo)_Condizioni_DIR:
+  - text : "Il Presito ProntoTuo ha un TAN fisso di 6,99% e TAEG 7,24%. Posso esserti ancora di aiuto?"
+  utter__PR_(Prestito_ProntoTuo)_Condizioni_IND_(prestitoprontotuo):
+  - text : "Il Presito ProntoTuo ha un TAN fisso di 6,99% e TAEG 7,24%. Posso esserti ancora utile?"
+  utter__PR_(Prestito_ProntoTuo)_Documenti_DIR:
+  - text : "Per inoltrare la richiesta del prestito ProntoTuo sono sufficienti un documento d'identità, il codice fiscale e il documento di reddito. Posso fare altro per te?"
+  utter__PR_(Prestito_ProntoTuo)_Documenti_IND_(prestitoprontotuo):
+  - text : "Per inoltrare la richiesta sono sufficienti un documento d'identità, il codice fiscale e il documento di reddito. Posso fare altro per"
+  utter__PR_(Prestito_ProntoTuo)_Importi_DIR:
+  - text : "Con il prestito ProntoTuo puoi richiedere da 2.000 a 25.000 euro, da restituire in 12 120 mesi. Posso fare altro per te?"
+  utter__PR_(Prestito_ProntoTuo)_Importi_IND_(prestitoprontotuo):
+  - text : "Con il prestito ProntoTuo puoi richiedere da 2.000 a 25.000 euro, da restituire in 12 120 mesi. Posso fare altro per te?"
+  utter__PR_(Prestito_ProntoTuo)_Informazioni_sul_prestito_ProntoTuo_DIR:
+  - text : "Prestito Pronto Tuo è il prestito personale adatto ad affrontare spese impreviste o a realizzare i tuoi desideri. Puoi richiedere un prestito online da 2.000 a 25.000 euro, con una durata da 12 a 120 mesi. Come posso esserti ancora utile?"
+  utter__PR_(Prestito_ProntoTuo)_Informazioni_sul_prestito_ProntoTuo_IND_(prestitipersonali):
+  - text : "Prestito Pronto Tuo è il prestito personale adatto ad affrontare spese impreviste o a realizzare i tuoi desideri. Puoi richiedere un prestito online da 2.000 a 25.000 euro, con una durata da 12 a 120 mesi. Come posso esserti ancora utile?"
+  utter__PR_(Prestito_ProntoTuo)_Informazioni_sul_prestito_ProntoTuo_IND_(prestitoprontotuo):
+  - text : "Prestito ProntoTuo è il prestito personale adatto ad affrontare spese impreviste o a realizzare i tuoi desideri. Puoi richiedere un prestito online da 2.000 a 25.000 euro, con una durata da 12 a 120 mesi. Come posso esserti ancora utile?"
+  utter__PR_(Prestito_dOnore)_Come_usare_il_prestito_DIR:
+  - text : "Con il Prestito d'Onore puoi sostenere i costi del master e coprire spese di vitto e alloggio fino al 10% del costo del master. Posso fare altro per te?"
+  utter__PR_(Prestito_dOnore)_Come_usare_il_prestito_IND_(prestitoonore):
+  - text : "Con il Prestito d'Onore puoi sostenere i costi del master e coprire spese di vitto e alloggio fino al 10% del costo del master. Posso fare altro per te?"
+  utter__PR_(Prestito_dOnore)_Informazioni_sul_prestito_donore_DIR:
+  - text : "Il prestito d'onore è destinato agli studenti e serve al finanziamento di un master post universitario. È un prestito agevolato e ha diverse convenzioni con le principali università e scuole di specializzazione. Cos'altro vorresti sapere?"
+  utter__PR_(Prestito_dOnore)_Informazioni_sul_prestito_donore_IND_(prestitipersonali):
+  - text : "Il prestito d'onore è destinato agli studenti e serve al finanziamento di un master post universitario. È un prestito agevolato e ha diverse convenzioni con le principali università e scuole di specializzazione. Cos'altro vorresti sapere?"
+  utter__PR_(Prestito_dOnore)_Informazioni_sul_prestito_donore_IND_(prestitoonore):
+  - text : "Il prestito d'onore è destinato agli studenti e serve al finanziamento di un master post universitario. È un prestito agevolato e ha diverse convenzioni con le principali università e scuole di specializzazione. Cos'altro vorresti sapere?"
+  utter__PR_(Prestito_dOnore)_Restituizione_DIR:
+  - text : "Puoi restituire il prestito a partire da 6 mesi e fino a 30 mesi dalla fine del master. È possibile diluire il rimborso in massimo 84 rate mensili. Posso fare altro per te?"
+  utter__PR_(Prestito_dOnore)_Restituizione_IND_(prestitoonore):
+  - text : "Puoi restituire il prestito a partire da 6 mesi e fino a 30 mesi dalla fine del master. È possibile diluire il rimborso in massimo 84 rate mensili. Posso fare altro per te?"
+  utter__PR_Prestiti_Personali_DIR:
+  - text : "I prestiti personali offerti da Banca Sella sono il prestito ProntoTuo, utile a qualsiasi tipo di spesa, e il Prestito d'Onore, destinato a finanziare un master post universitario. A quale dei due saresti più interessato?"
+  utter__PR_Tipi_Prestito_DIR:
+  - text : "Banca Sella offre mutui (in versione classica e Green) e prestiti di tipo personale, per esempio il Prestito ProntoTuo e il prestito d'Onore. Sono disponibili anche leasing, noleggio e prestiti per l'efficientamento energetico. Scegli la categoria che più ti interessa!"
+  utter__Rivela_Par:
+  - text : "vedi dal fullfilment"
+  utter__Salva_Par:
+  - text : "vedi dal fullfilment"
+  utter__Tempo:
+  - text : "vedi dal fullfilment"
+  utter__richiedere_prelievo:
+  - text : "vedi dal fullfilment"
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+
+
