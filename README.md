@@ -38,37 +38,37 @@ la Knowledge Base da configurare su Rasa era la seguente:
 
 Di seguito la struttura del file json con alcuni esempi:
 
-{ \\
-  "rasa_nlu_data": {\\
-    "common_examples": [\\
-      {\\
-        "text": "Vorrei acquistare una box per la ricarica della macchina elettrica",\\
-        "intent": "PR - (Prestito Green) Finalità Ricarica veicoli - IND (finalita-prestito-green)"\\
-      },\\
-{\\
-        "text": "Ricarica di 100 euro",\\
-        "intent": "- (LOG) - Accredito Denaro",\\
-        "entities": [\\
-          {\\
-            "start": 0,\\
-            "end": 8,\\
-            "value": "Ricarica",\\
-            "entity": "operazione_accredito"\\
-          },\\
-          {\\
-            "start": 12,\\
-            "end": 15,\\
-            "value": "100",\\
-            "entity": "number"\\
-          },\\
-          {\\
-            "start": 16,\\
-            "end": 20,\\
-            "value": "euro",\\
-            "entity": "currency-name"\\
-          }\\
-        ]\\
-      },\\
+{ 
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "Vorrei acquistare una box per la ricarica della macchina elettrica",
+        "intent": "PR - (Prestito Green) Finalità Ricarica veicoli - IND (finalita-prestito-green)"
+      },
+{
+        "text": "Ricarica di 100 euro",
+        "intent": "- (LOG) - Accredito Denaro",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "Ricarica",
+            "entity": "operazione_accredito"
+          },
+          {
+            "start": 12,
+            "end": 15,
+            "value": "100",
+            "entity": "number"
+          },
+          {
+            "start": 16,
+            "end": 20,
+            "value": "euro",
+            "entity": "currency-name"
+          }
+        ] 
+      },
       
       
 ## Struttura file domain.yml
