@@ -1,6 +1,6 @@
 <div align="center">
     <a href="https://www.unisalento.it">
-        <img src="imgReadme/unilogo.png" width="50%" height="50%" >
+        <img src="imgReadme/unilogo-2.png" width="50%" height="50%" >
     </a>
 </div>
 
